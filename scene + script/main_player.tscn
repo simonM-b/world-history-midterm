@@ -18,3 +18,6 @@ offset_bottom = 95.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_acwip")
+
+[node name="jumpray" type="RayCast2D" parent="."]
+target_position = Vector2(0, 300)
