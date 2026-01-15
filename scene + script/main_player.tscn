@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm08rkou3jlh"]
+
+[ext_resource type="Script" uid="uid://c2gocv056d3ej" path="res://scene + script/main_player.gd" id="1_w0r2c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acwip"]
+radius = 50.0
+height = 190.0
+
+[node name="main player" type="CharacterBody2D"]
+script = ExtResource("1_w0r2c")
+metadata/_edit_vertical_guides_ = [50.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -50.0
+offset_top = -96.0
+offset_right = 50.0
+offset_bottom = 95.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_acwip")

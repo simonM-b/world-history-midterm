@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cxmrpr3dkaduq"]
+[gd_scene load_steps=3 format=3 uid="uid://cxmrpr3dkaduq"]
+
+[ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_su6j1"]
 
 [node name="main" type="Node2D"]
+metadata/_edit_vertical_guides_ = [0.0]
+
+[node name="main player" parent="." instance=ExtResource("1_je4m1")]
+position = Vector2(67, -114)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_su6j1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_su6j1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, -324)
