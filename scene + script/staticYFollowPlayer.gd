@@ -16,7 +16,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(pressing)
+	#print(pressing)
 	position.y = GLOBAL.CAMERA_Y
 	if Input.is_action_pressed("left"):
 		position.x = GLOBAL.playerPos.x - CAMERA_X_OFFSET
