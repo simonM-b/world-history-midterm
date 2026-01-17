@@ -1,22 +1,32 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=3 uid="uid://cxmrpr3dkaduq"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://cxmrpr3dkaduq"]
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 
 [ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
 [ext_resource type="Script" uid="uid://6ely26juf0wu" path="res://scene + script/staticYFollowPlayer.gd" id="2_su6j1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_su6j1"]
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su6j1"]
 size = Vector2(796, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywfar"]
 size = Vector2(806, 60)
 
+=======
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 [node name="main" type="Node2D"]
 metadata/_edit_vertical_guides_ = [0.0, -501.0]
-metadata/_edit_horizontal_guides_ = [-1179.0]
 
 [node name="main player" parent="." instance=ExtResource("1_je4m1")]
+<<<<<<< HEAD
 position = Vector2(1364, -532)
+=======
+position = Vector2(1111, -532)
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 
 [node name="floor" type="StaticBody2D" parent="."]
 
@@ -29,32 +39,29 @@ shape = SubResource("WorldBoundaryShape2D_su6j1")
 
 [node name="ColorRect" type="ColorRect" parent="floor"]
 offset_left = -1835.0
-offset_right = 6391.0
+offset_right = 3080.0
 offset_bottom = 328.0
 color = Color(1, 0.7058824, 1, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="floor"]
-offset_left = -158.09277
-offset_top = 12.913997
-offset_right = 6390.95
-offset_bottom = 340.914
-rotation = 0.0077009276
-color = Color(0.9453774, 0.0009354693, 0.97621506, 1)
-
 [node name="ColorRect2" type="ColorRect" parent="floor"]
 offset_left = -1835.0
-offset_top = -1206.0
+offset_top = -1180.0
 offset_right = -1.0
 offset_bottom = 328.0
 color = Color(1, 0.7058824, 1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(1365, -532)
+=======
+position = Vector2(1111, -532)
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 10.0
+position_smoothing_speed = 4.0
 script = ExtResource("2_su6j1")
+<<<<<<< HEAD
 
 [node name="button" type="StaticBody2D" parent="."]
 position = Vector2(969, -16)
@@ -74,3 +81,5 @@ shape = SubResource("RectangleShape2D_su6j1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button"]
 position = Vector2(373, 0)
 shape = SubResource("RectangleShape2D_ywfar")
+=======
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)

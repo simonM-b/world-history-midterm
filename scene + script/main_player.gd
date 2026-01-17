@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+<<<<<<< HEAD
 @export var speed = 1200
 @export var jumpSpeed = -1500
 @export var gravity = 8000
@@ -12,20 +13,34 @@ var shouldJump = false
 var jumpHoldTime = 0
 var canJump = false
 var jumpTimes = 0
+=======
+
+const SPEED = 500.0
+const JUMP_VELOCITY = -400.0
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	GLOBAL.playerPos = position
 	GLOBAL.playerVel = velocity
-	
-	velocity.y += gravity * delta
-	var dir = Input.get_axis("left", "right")
-	if dir != 0:
-		velocity.x = lerp(velocity.x, dir * speed, acceleration)
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
 	else:
-		velocity.x = lerp(velocity.x, 0.0, friction)
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+<<<<<<< HEAD
 	if Input.is_action_pressed("jump") and jumpRay.is_colliding():
 		jumpHoldTime += 0.1
 		print(jumpHoldTime," hold time")
@@ -51,3 +66,5 @@ func _on_area_colidesr_area_entered(area: Area2D) -> void:
 	if area.is_in_group("jump button"):
 		GLOBAL.money += 1
 		print(GLOBAL.money)
+=======
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
