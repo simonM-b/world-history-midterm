@@ -6,15 +6,8 @@ const CAMERA_X_OFFSET = 300
 var playerPos
 var playerVel
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 var money = 0
-=======
-
->>>>>>> parent of 92a5874 (basic movement and camera controlls)
-=======
-
->>>>>>> parent of 92a5874 (basic movement and camera controlls)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

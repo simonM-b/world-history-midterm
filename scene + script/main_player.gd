@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 @export var speed = 1200
 @export var jumpSpeed = -1500
 @export var gravity = 8000
@@ -14,16 +13,9 @@ var shouldJump = false
 var jumpHoldTime = 0
 var canJump = false
 var jumpTimes = 0
-=======
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
->>>>>>> parent of 92a5874 (basic movement and camera controlls)
-=======
-
-const SPEED = 500.0
-const JUMP_VELOCITY = -400.0
->>>>>>> parent of 92a5874 (basic movement and camera controlls)
 
 
 func _physics_process(delta: float) -> void:
@@ -46,8 +38,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-<<<<<<< HEAD
-<<<<<<< HEAD
 	if Input.is_action_pressed("jump") and jumpRay.is_colliding():
 		jumpHoldTime += 0.1
 		print(jumpHoldTime," hold time")
@@ -73,7 +63,3 @@ func _on_area_colidesr_area_entered(area: Area2D) -> void:
 	if area.is_in_group("jump button"):
 		GLOBAL.money += 1
 		print(GLOBAL.money)
-=======
->>>>>>> parent of 92a5874 (basic movement and camera controlls)
-=======
->>>>>>> parent of 92a5874 (basic movement and camera controlls)
