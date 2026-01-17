@@ -10,9 +10,6 @@ extends CharacterBody2D
 @onready var jumpRay = $jumpray
 
 var shouldJump = false
-var jumpHoldTime = 0
-var canJump = false
-var jumpTimes = 0
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
@@ -38,25 +35,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	if Input.is_action_pressed("jump") and jumpRay.is_colliding():
-		jumpHoldTime += 0.1
-		print(jumpHoldTime," hold time")
-	else:
-		jumpHoldTime = 0
-		canJump = false
-	
-	if !Input.is_action_just_pressed("jump"):
-		canJump = false
-		
-		
 	if Input.is_action_just_pressed("jump") and jumpRay.is_colliding():
 		shouldJump = true
-		
-	if is_on_floor():
-		canJump = true
+	else:
+		shouldJump = false
 	
-	if shouldJump and jumpHoldTime >0 and canJump:
-		velocity.y = jumpSpeed + (jumpHoldTime*200)
+	
+	if shouldJump and is_on_floor():
+		velocity.y = jumpSpeed
 
 #https://kidscancode.org/godot_recipes/4.x/2d/platform_character/
 func _on_area_colidesr_area_entered(area: Area2D) -> void:

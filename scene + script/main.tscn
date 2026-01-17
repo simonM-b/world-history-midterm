@@ -16,6 +16,7 @@ metadata/_edit_vertical_guides_ = [0.0, -501.0]
 
 [node name="main player" parent="." instance=ExtResource("1_je4m1")]
 position = Vector2(1364, -532)
+gravity = 16000
 
 [node name="floor" type="StaticBody2D" parent="."]
 
