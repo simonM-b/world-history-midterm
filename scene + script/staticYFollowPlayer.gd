@@ -10,7 +10,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 <<<<<<< HEAD
+<<<<<<< HEAD
 	#print(pressing)
+=======
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 =======
 >>>>>>> parent of 92a5874 (basic movement and camera controlls)
 	position.y = GLOBAL.CAMERA_Y

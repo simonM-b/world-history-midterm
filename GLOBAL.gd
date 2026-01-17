@@ -7,7 +7,11 @@ var playerPos
 var playerVel
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 var money = 0
+=======
+
+>>>>>>> parent of 92a5874 (basic movement and camera controlls)
 =======
 
 >>>>>>> parent of 92a5874 (basic movement and camera controlls)
