@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxmrpr3dkaduq"]
+[gd_scene load_steps=5 format=3 uid="uid://cxmrpr3dkaduq"]
 
 [ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
 [ext_resource type="Script" uid="uid://6ely26juf0wu" path="res://scene + script/staticYFollowPlayer.gd" id="2_su6j1"]
@@ -6,17 +6,13 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_su6j1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su6j1"]
-size = Vector2(796, 68)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywfar"]
-size = Vector2(806, 60)
+size = Vector2(418, 68)
 
 [node name="main" type="Node2D"]
 metadata/_edit_vertical_guides_ = [0.0, -501.0]
 
 [node name="main player" parent="." instance=ExtResource("1_je4m1")]
-position = Vector2(1364, -532)
-gravity = 16000
+position = Vector2(3370, -532)
 
 [node name="floor" type="StaticBody2D" parent="."]
 
@@ -41,28 +37,21 @@ offset_bottom = 328.0
 color = Color(1, 0.7058824, 1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1365, -532)
+position = Vector2(3370, -532)
 zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 script = ExtResource("2_su6j1")
 
-[node name="button" type="StaticBody2D" parent="."]
-position = Vector2(969, -16)
-
-[node name="Area2D" type="Area2D" parent="button" groups=["jump button"]]
+[node name="Area2D" type="Area2D" parent="."]
 position = Vector2(373, 0)
 
-[node name="ColorRect" type="ColorRect" parent="button/Area2D"]
-offset_left = -404.0
+[node name="ColorRect" type="ColorRect" parent="Area2D"]
+offset_left = -208.0
 offset_top = -35.0
-offset_right = 405.0
+offset_right = 209.0
 offset_bottom = 36.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_su6j1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button"]
-position = Vector2(373, 0)
-shape = SubResource("RectangleShape2D_ywfar")
