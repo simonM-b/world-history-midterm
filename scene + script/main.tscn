@@ -13,6 +13,7 @@ metadata/_edit_vertical_guides_ = [0.0, -501.0]
 
 [node name="main player" parent="." instance=ExtResource("1_je4m1")]
 position = Vector2(3370, -532)
+jumpSpeed = -2000
 
 [node name="floor" type="StaticBody2D" parent="."]
 
@@ -40,7 +41,6 @@ color = Color(1, 0.7058824, 1, 1)
 position = Vector2(3370, -532)
 zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
-position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 script = ExtResource("2_su6j1")
 

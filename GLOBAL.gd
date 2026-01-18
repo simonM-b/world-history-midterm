@@ -1,7 +1,7 @@
 extends Node
 
 const CAMERA_Y = -550
-const CAMERA_X_OFFSET = 300
+var lastMovePress
 
 var playerPos
 var playerVel
@@ -13,4 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_pressed("left"):
+		lastMovePress = "left"
+	elif Input.is_action_pressed("right"):
+		lastMovePress = "right"

@@ -20,4 +20,4 @@ offset_bottom = 95.0
 shape = SubResource("CapsuleShape2D_acwip")
 
 [node name="jumpray" type="RayCast2D" parent="."]
-target_position = Vector2(0, 300)
+target_position = Vector2(0, 400)

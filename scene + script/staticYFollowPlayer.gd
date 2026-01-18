@@ -1,6 +1,7 @@
 extends Camera2D
 
 const SMALLER_X_LIMIT = -500
+const CAMERA_X_OFFSET = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,16 +10,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(pressing)
 	position.y = GLOBAL.CAMERA_Y
-	if Input.is_action_pressed("left"):
+	if GLOBAL.lastMovePress == "left":
 		position.x = GLOBAL.playerPos.x - CAMERA_X_OFFSET
-		pressing = "can tween to center once movement presses stoped"
-	elif Input.is_action_pressed("right"):
+	elif GLOBAL.lastMovePress == "right":
 		position.x = GLOBAL.playerPos.x + CAMERA_X_OFFSET
-		pressing = "can tween to center once movement presses stoped"
-	else:
-		pass
 
 		
 		
