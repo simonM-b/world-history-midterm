@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm08rkou3jlh"]
+[gd_scene load_steps=4 format=3 uid="uid://dm08rkou3jlh"]
 
 [ext_resource type="Script" uid="uid://c2gocv056d3ej" path="res://scene + script/main_player.gd" id="1_w0r2c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acwip"]
 radius = 50.0
 height = 190.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w0r2c"]
+radius = 51.0
+height = 194.0
 
 [node name="main player" type="CharacterBody2D"]
 script = ExtResource("1_w0r2c")
@@ -21,3 +25,10 @@ shape = SubResource("CapsuleShape2D_acwip")
 
 [node name="jumpray" type="RayCast2D" parent="."]
 target_position = Vector2(0, 400)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_w0r2c")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

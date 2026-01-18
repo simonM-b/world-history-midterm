@@ -12,7 +12,6 @@ var canJump = false
 
 
 func _physics_process(delta):
-	print(velocity.y)
 	GLOBAL.playerPos = position
 	velocity.y += gravity * delta
 	var dir = Input.get_axis("left", "right")
@@ -28,3 +27,9 @@ func _physics_process(delta):
 	if is_on_floor() and canJump:
 		canJump = false
 		velocity.y = jumpSpeed
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("button"):
+		print("money: ",GLOBAL.money)
+		GLOBAL.money += 1
