@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://buxevgs4kto5q"]
+[gd_scene load_steps=2 format=3 uid="uid://buxevgs4kto5q"]
+
+[ext_resource type="FontFile" uid="uid://dj52ykovlccx8" path="res://fonts/Retro Gaming.ttf" id="1_37mbf"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -25,25 +27,61 @@ offset_right = 1.0
 layout_mode = 2
 
 [node name="back" type="Button" parent="CenterContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 24
 text = "BACK"
 
-[node name="title" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="title" type="Label" parent="CenterContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 32
 text = "CREDITS:"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-text = "Simon"
+theme_override_constants/separation = 20
+
+[node name="Simon" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 24
+text = "Simon M"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Nat" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 24
+text = "Natalie M"
+horizontal_alignment = 1
+
+[node name="cole - tilesheet" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 24
 text = "cole-sweet.itch.io"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="caffinate - font" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Natalie"
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 24
+text = "caffinate.itch.io"
+horizontal_alignment = 1
+
+[node name="kidscancode_org" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37mbf")
+theme_override_font_sizes/font_size = 24
+text = "kidscancode.org"
 horizontal_alignment = 1
