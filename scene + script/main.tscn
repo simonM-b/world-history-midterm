@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxmrpr3dkaduq"]
+[gd_scene load_steps=8 format=3 uid="uid://cxmrpr3dkaduq"]
 
 [ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
 [ext_resource type="Script" uid="uid://cbogkax30lrxk" path="res://scene + script/main.gd" id="1_ywfar"]
@@ -11,6 +11,9 @@ size = Vector2(822, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywfar"]
 size = Vector2(830, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnbvq"]
+size = Vector2(616, 630)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_ywfar")
@@ -31,7 +34,7 @@ shape = SubResource("WorldBoundaryShape2D_su6j1")
 
 [node name="ColorRect" type="ColorRect" parent="floor"]
 offset_left = -1835.0
-offset_right = 3080.0
+offset_right = 6466.0
 offset_bottom = 328.0
 color = Color(1, 0.7058824, 1, 1)
 
@@ -50,7 +53,7 @@ position_smoothing_speed = 4.0
 script = ExtResource("2_su6j1")
 
 [node name="button" type="StaticBody2D" parent="."]
-position = Vector2(701, -16)
+position = Vector2(2282, -16)
 
 [node name="Area2D" type="Area2D" parent="button" groups=["button"]]
 
@@ -83,3 +86,24 @@ offset_right = 58.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
 text = "money:"
+
+[node name="shop" type="StaticBody2D" parent="."]
+position = Vector2(725, -313)
+
+[node name="ColorRect" type="ColorRect" parent="shop"]
+offset_left = -314.0
+offset_top = -313.0
+offset_right = 316.0
+offset_bottom = 317.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shop"]
+shape = SubResource("RectangleShape2D_jnbvq")
+
+[node name="Label" type="Label" parent="shop"]
+offset_left = -316.0
+offset_top = -403.0
+offset_right = -165.0
+offset_bottom = -315.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "shop"
