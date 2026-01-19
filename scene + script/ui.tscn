@@ -15,34 +15,30 @@ script = ExtResource("1_fctkd")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme_override_constants/separation = 20
+theme_override_constants/separation = 0
 
 [node name="money label" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "money:0000"
-
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_font_sizes/font_size = 28
+text = "money:00000000"
 
 [node name="slider label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 28
 text = "map:"
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
 layout_mode = 2
 
 [node name="HSlider" type="HSlider" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(700, 0)
+custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 max_value = 6.0
 step = 0.01
@@ -52,7 +48,7 @@ ticks_position = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 0
 
 [node name="slider label2" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -67,7 +63,7 @@ text = "    button"
 [node name="slider label4" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "      cotton"
+text = "     cotton"
 
 [node name="slider label5" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2

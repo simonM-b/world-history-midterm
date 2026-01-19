@@ -11,7 +11,7 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 554.0
-offset_bottom = 392.0
+offset_bottom = 457.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
@@ -21,6 +21,7 @@ anchor_bottom = 1.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 6
 
 [node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -28,3 +29,102 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "SHOP"
 horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 34
+
+[node name="walking speed" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/walking speed"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "buy $100"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/walking speed"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "2x sprinting speed 
+(to sprint hold shift)"
+
+[node name="HSeparator2" type="HSeparator" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="cotton plant" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/cotton plant"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "buy $50"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/cotton plant"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Cotton plant"
+
+[node name="Machines" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/Machines"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "buy $1000"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/Machines"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Machines"
+
+[node name="people" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/people"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "buy $9000"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/people"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "People plant"
+
+[node name="boxes" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/boxes"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "buy $20000"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/boxes"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Shipping boxes"
+
+[node name="make a shirt" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/make a shirt"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "buy $291100"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/make a shirt"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Finish the shirt"

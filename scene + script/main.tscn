@@ -275,8 +275,14 @@ color = Color(1, 0, 0, 1)
 [node name="shop" type="Node2D" parent="."]
 
 [node name="shop" parent="shop" instance=ExtResource("6_nk0ok")]
-visible = false
 offset_left = 566.0
-offset_top = -391.0
+offset_top = -439.0
 offset_right = 566.0
-offset_bottom = -391.0
+offset_bottom = -439.0
+
+[node name="Button" type="Button" parent="shop"]
+offset_left = 630.0
+offset_top = -649.0
+offset_right = 1086.0
+offset_bottom = -509.0
+flat = true
