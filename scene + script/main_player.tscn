@@ -1,24 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm08rkou3jlh"]
+[gd_scene load_steps=8 format=3 uid="uid://dm08rkou3jlh"]
 
 [ext_resource type="Script" uid="uid://c2gocv056d3ej" path="res://scene + script/main_player.gd" id="1_w0r2c"]
+[ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="2_s6ogv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acwip"]
-radius = 50.0
-height = 190.0
+radius = 49.0
+height = 134.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w0r2c"]
-radius = 51.0
-height = 194.0
+radius = 53.0
+height = 138.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y46b"]
+atlas = ExtResource("2_s6ogv")
+region = Rect2(8, 56, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e53k1"]
+atlas = ExtResource("2_s6ogv")
+region = Rect2(16, 56, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5h1l8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y46b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e53k1")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="main player" type="CharacterBody2D"]
 script = ExtResource("1_w0r2c")
 metadata/_edit_vertical_guides_ = [50.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -50.0
-offset_top = -96.0
+offset_top = -69.0
 offset_right = 50.0
-offset_bottom = 95.0
+offset_bottom = 68.0
+color = Color(1, 0, 1, 0.16078432)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_acwip")
@@ -30,5 +55,12 @@ target_position = Vector2(0, 400)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_w0r2c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_5h1l8")
+animation = &"new_animation"
+frame = 1
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

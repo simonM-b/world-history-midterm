@@ -13,7 +13,7 @@ config_version=5
 config/name="World History Midterm"
 run/main_scene="uid://cxmrpr3dkaduq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://images/icon.svg"
 
 [autoload]
 
@@ -44,3 +44,4 @@ jump={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

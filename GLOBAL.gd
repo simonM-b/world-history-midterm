@@ -1,6 +1,6 @@
 extends Node
 
-const CAMERA_Y = -550
+const CAMERA_Y = -450.0
 var lastMovePress
 
 var playerPos
