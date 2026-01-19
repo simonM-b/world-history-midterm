@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://buxevgs4kto5q"]
+[gd_scene load_steps=4 format=3 uid="uid://buxevgs4kto5q"]
 
 [ext_resource type="Script" uid="uid://dd2mncx0mib18" path="res://scene + script/credits.gd" id="1_1rh0u"]
 [ext_resource type="FontFile" uid="uid://dj52ykovlccx8" path="res://fonts/Retro Gaming.ttf" id="1_37mbf"]
+[ext_resource type="Texture2D" uid="uid://5hskjndnx7u1" path="res://images/start/shirt-manufacturer-ditherlicious.png" id="2_2vubn"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -12,11 +13,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1rh0u")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ShirtManufacturerDitherlicious" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(576.96204, 292.5)
+scale = Vector2(1.1914557, 1.1914557)
+texture = ExtResource("2_2vubn")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1172.0
-offset_bottom = 665.0
-color = Color(0.39688927, 0.39688927, 0.39688924, 1)
+offset_left = -213.0
+offset_top = 138.0
+offset_right = 1365.0
+offset_bottom = 515.0
+color = Color(0, 0, 0, 0.8235294)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -36,6 +45,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_37mbf")
 theme_override_font_sizes/font_size = 24
 text = "BACK"
+flat = true
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
