@@ -15,7 +15,7 @@ var canJump = false
 
 func _physics_process(delta):
 	GLOBAL.mapProgress = ((900 - position.x)/2000 )*-1
-	print(GLOBAL.mapProgress)
+	#print(GLOBAL.mapProgress)
 	
 	handleSpriteFlip()
 	GLOBAL.playerPos = position

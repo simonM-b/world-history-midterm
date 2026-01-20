@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cxmrpr3dkaduq"]
+[gd_scene load_steps=14 format=4 uid="uid://cxmrpr3dkaduq"]
 
 [ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
 [ext_resource type="Script" uid="uid://cbogkax30lrxk" path="res://scene + script/main.gd" id="1_ywfar"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cgim27pxretky" path="res://scene + script/ui.tscn" id="3_1pu4h"]
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="3_jnbvq"]
 [ext_resource type="PackedScene" uid="uid://c8s132mgwy67m" path="res://scene + script/shop_ui.tscn" id="6_nk0ok"]
+[ext_resource type="StyleBox" uid="uid://ddvgphykvvbgb" path="res://scene + script/stylebox.tres" id="7_73fyn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pu4h"]
 texture = ExtResource("3_jnbvq")
@@ -149,6 +150,14 @@ size = Vector2(822, 68)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywfar"]
 size = Vector2(830, 64)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73fyn"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0, 0.9647059, 0, 1)
+
 [node name="main" type="Node2D"]
 script = ExtResource("1_ywfar")
 metadata/_edit_vertical_guides_ = [0.0, -501.0]
@@ -275,14 +284,31 @@ color = Color(1, 0, 0, 1)
 [node name="shop" type="Node2D" parent="."]
 
 [node name="shop" parent="shop" instance=ExtResource("6_nk0ok")]
+visible = false
 offset_left = 566.0
 offset_top = -439.0
 offset_right = 566.0
 offset_bottom = -439.0
 
 [node name="Button" type="Button" parent="shop"]
-offset_left = 630.0
+offset_left = 625.0
 offset_top = -649.0
 offset_right = 1086.0
-offset_bottom = -509.0
-flat = true
+offset_bottom = -503.0
+focus_mode = 0
+mouse_behavior_recursive = 2
+theme_override_styles/normal = ExtResource("7_73fyn")
+theme_override_styles/pressed = ExtResource("7_73fyn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
+
+[node name="cotton" type="Node2D" parent="."]
+
+[node name="machines" type="Node2D" parent="."]
+
+[node name="people" type="Node2D" parent="."]
+
+[node name="boxes" type="Node2D" parent="."]
+
+[node name="end" type="Node2D" parent="."]
+
+[connection signal="pressed" from="shop/Button" to="." method="_on_button_pressed"]

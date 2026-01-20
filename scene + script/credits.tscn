@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://buxevgs4kto5q"]
+[gd_scene load_steps=6 format=3 uid="uid://buxevgs4kto5q"]
 
 [ext_resource type="Script" uid="uid://dd2mncx0mib18" path="res://scene + script/credits.gd" id="1_1rh0u"]
 [ext_resource type="FontFile" uid="uid://dj52ykovlccx8" path="res://fonts/Retro Gaming.ttf" id="1_37mbf"]
 [ext_resource type="Texture2D" uid="uid://5hskjndnx7u1" path="res://images/start/shirt-manufacturer-ditherlicious.png" id="2_2vubn"]
+[ext_resource type="StyleBox" uid="uid://ddvgphykvvbgb" path="res://scene + script/stylebox.tres" id="4_whi76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whi76"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.9647059, 0, 1)
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -44,8 +53,10 @@ texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_37mbf")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("4_whi76")
+theme_override_styles/pressed = ExtResource("4_whi76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whi76")
 text = "BACK"
-flat = true
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)

@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5qrulae3rrpm"]
+[gd_scene load_steps=6 format=3 uid="uid://c5qrulae3rrpm"]
 
 [ext_resource type="Script" uid="uid://bga6ghvjpsyq5" path="res://scene + script/title.gd" id="1_s2oh1"]
 [ext_resource type="Texture2D" uid="uid://bf08uoefc5pek" path="res://images/start/475442889_1229031218855383_763536642154055668_n-ditherlicious.png" id="2_jurty"]
 [ext_resource type="FontFile" uid="uid://dj52ykovlccx8" path="res://fonts/Retro Gaming.ttf" id="3_jurty"]
+[ext_resource type="StyleBox" uid="uid://ddvgphykvvbgb" path="res://scene + script/stylebox.tres" id="4_j27sm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j27sm"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.9647059, 0, 1)
 
 [node name="title" type="Control"]
 layout_mode = 3
@@ -75,8 +84,10 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.8089983, 0.8089983, 0.8089982, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("4_j27sm")
+theme_override_styles/pressed = ExtResource("4_j27sm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "PLAY"
-flat = true
 
 [node name="settings" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -84,8 +95,10 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.8089983, 0.8089983, 0.8089982, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
-text = "SETTINGS"
-flat = true
+theme_override_styles/normal = ExtResource("4_j27sm")
+theme_override_styles/pressed = ExtResource("4_j27sm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
+text = " SETTINGS "
 
 [node name="credits" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -93,8 +106,10 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.8089983, 0.8089983, 0.8089982, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("4_j27sm")
+theme_override_styles/pressed = ExtResource("4_j27sm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "CREDITS"
-flat = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
