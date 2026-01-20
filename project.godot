@@ -19,6 +19,10 @@ config/icon="res://images/icon.svg"
 
 GLOBAL="*res://GLOBAL.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [gui]
 
 theme/custom_font="uid://dj52ykovlccx8"

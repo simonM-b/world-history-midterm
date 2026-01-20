@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cxmrpr3dkaduq"]
+[gd_scene load_steps=15 format=4 uid="uid://cxmrpr3dkaduq"]
 
 [ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
 [ext_resource type="Script" uid="uid://cbogkax30lrxk" path="res://scene + script/main.gd" id="1_ywfar"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="3_jnbvq"]
 [ext_resource type="PackedScene" uid="uid://c8s132mgwy67m" path="res://scene + script/shop_ui.tscn" id="6_nk0ok"]
 [ext_resource type="StyleBox" uid="uid://ddvgphykvvbgb" path="res://scene + script/stylebox.tres" id="7_73fyn"]
+[ext_resource type="PackedScene" uid="uid://burcj3s0a061r" path="res://scene + script/cotton_ui.tscn" id="8_770x0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pu4h"]
 texture = ExtResource("3_jnbvq")
@@ -184,7 +185,7 @@ rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_su6j1")
 
 [node name="end" type="CollisionShape2D" parent="floor"]
-position = Vector2(12753, 0)
+position = Vector2(12897, 0)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_su6j1")
 
@@ -284,7 +285,6 @@ color = Color(1, 0, 0, 1)
 [node name="shop" type="Node2D" parent="."]
 
 [node name="shop" parent="shop" instance=ExtResource("6_nk0ok")]
-visible = false
 offset_left = 566.0
 offset_top = -439.0
 offset_right = 566.0
@@ -301,13 +301,43 @@ theme_override_styles/normal = ExtResource("7_73fyn")
 theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
+[node name="Label" type="Label" parent="shop"]
+offset_left = 1121.0
+offset_top = -643.0
+offset_right = 1779.0
+offset_bottom = -558.0
+theme_override_font_sizes/font_size = 32
+text = "<- anything with a green border: 
+click to open menue"
+
 [node name="cotton" type="Node2D" parent="."]
+
+[node name="cotton ui" parent="cotton" instance=ExtResource("8_770x0")]
+offset_left = 4599.0
+offset_top = -439.0
+offset_right = 4599.0
+offset_bottom = -439.0
+
+[node name="Button" type="Button" parent="cotton"]
+offset_left = 4591.0
+offset_top = -649.0
+offset_right = 5318.0
+offset_bottom = -503.0
+focus_mode = 0
+mouse_behavior_recursive = 2
+theme_override_styles/normal = ExtResource("7_73fyn")
+theme_override_styles/pressed = ExtResource("7_73fyn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
 [node name="machines" type="Node2D" parent="."]
 
 [node name="people" type="Node2D" parent="."]
 
 [node name="boxes" type="Node2D" parent="."]
+editor_description = "a game where you hsave to stack a combination of baxes from one side to another
+
+- - -  -
+"
 
 [node name="end" type="Node2D" parent="."]
 

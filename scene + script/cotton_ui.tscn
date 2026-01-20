@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://burcj3s0a061r"]
+
+[ext_resource type="Script" uid="uid://d4e8lx6dt4nsy" path="res://scene + script/cotton_ui.gd" id="1_xs2gf"]
+[ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="2_gp5vi"]
+
+[node name="cotton ui" type="Control"]
+layout_mode = 3
+anchor_right = 0.614
+anchor_bottom = 0.69900006
+offset_right = 444.672
+offset_bottom = 195.04797
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xs2gf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 709.0
+offset_bottom = 457.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 708.0
+offset_bottom = 455.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "COTTON"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="cotton" type="Sprite2D" parent="Node2D"]
+position = Vector2(53, 93.00001)
+scale = Vector2(10, 10)
+texture = ExtResource("2_gp5vi")
+region_enabled = true
+region_rect = Rect2(48, 40, 8, 8)
