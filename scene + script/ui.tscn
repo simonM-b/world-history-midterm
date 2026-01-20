@@ -90,3 +90,20 @@ text = "     boxes"
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "       End"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 120.0
+offset_right = 1133.0
+offset_bottom = 141.0
+text = "This is the map and it will show you where you currently are"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 98.999985
+offset_right = 784.8607
+offset_bottom = 119.999985
+rotation = -0.54481465
+text = "--->"

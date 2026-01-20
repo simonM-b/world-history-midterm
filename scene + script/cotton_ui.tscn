@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://burcj3s0a061r"]
+[gd_scene load_steps=9 format=3 uid="uid://burcj3s0a061r"]
 
 [ext_resource type="Script" uid="uid://d4e8lx6dt4nsy" path="res://scene + script/cotton_ui.gd" id="1_xs2gf"]
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="2_gp5vi"]
+[ext_resource type="Script" uid="uid://cl00y3q2coqd4" path="res://scene + script/cotton.gd" id="3_gp5vi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j27hx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jpxf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4f4lv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gp5vi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xs2gf"]
 
 [node name="cotton ui" type="Control"]
 layout_mode = 3
@@ -11,17 +22,20 @@ offset_right = 444.672
 offset_bottom = 195.04797
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_xs2gf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 709.0
 offset_bottom = 457.0
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 0
 offset_right = 708.0
 offset_bottom = 455.0
+mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -29,6 +43,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -40,13 +55,73 @@ horizontal_alignment = 1
 [node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="cotton" type="Sprite2D" parent="Node2D"]
-position = Vector2(53, 93.00001)
+position = Vector2(122.999985, 2568.9998)
 scale = Vector2(10, 10)
 texture = ExtResource("2_gp5vi")
 region_enabled = true
 region_rect = Rect2(48, 40, 8, 8)
+script = ExtResource("3_gp5vi")
+
+[node name="Button" type="Button" parent="Node2D/cotton"]
+offset_left = -4.4999986
+offset_top = -4.4000244
+offset_right = 3.5000014
+offset_bottom = 3.5999756
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j27hx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8jpxf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4f4lv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gp5vi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xs2gf")
+flat = true
+
+[node name="damageshow" type="Timer" parent="Node2D/cotton"]
+wait_time = 0.05
+autostart = true
+
+[node name="cottonresettimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 359.0
+offset_right = 698.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 32
+text = "Each     is a cotton. click 2-3 times
+to harvest. 1 cotton = $5"
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(130, 21)
+scale = Vector2(6, 6)
+texture = ExtResource("2_gp5vi")
+region_enabled = true
+region_rect = Rect2(48, 40, 8, 8)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 46.0
+offset_right = 710.0
+offset_bottom = 457.0
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "to play mini game buy it 
+from the shop. (the shop is to the
+far left of the world.) Cost = $50"
+
+[connection signal="killed" from="Node2D/cotton" to="." method="_on_cotton_killed"]
+[connection signal="pressed" from="Node2D/cotton/Button" to="Node2D/cotton" method="_on_button_pressed"]
+[connection signal="timeout" from="Node2D/cotton/damageshow" to="Node2D/cotton" method="_on_damageshow_timeout"]
+[connection signal="timeout" from="cottonresettimer" to="." method="_on_cottonresettimer_timeout"]

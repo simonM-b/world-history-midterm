@@ -1,6 +1,7 @@
 extends Node2D
 
 var shopButton = 0
+var cottonButton = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,3 +19,11 @@ func _on_button_pressed() -> void:
 		$shop/shop.show()
 	else:
 		$shop/shop.hide()
+
+
+func _on_c_button_pressed() -> void:
+	cottonButton += 1
+	if cottonButton % 2 == 1:
+		$"cotton/cotton ui".show()
+	else:
+		$"cotton/cotton ui".hide()

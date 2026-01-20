@@ -171,7 +171,7 @@ tile_map_data = PackedByteArray("AAAEAP7/AAAJAAMAAAAFAP3/AAAKAAIAAAAFAP7/AAAKAAM
 tile_set = SubResource("TileSet_nk0ok")
 
 [node name="main player" parent="." instance=ExtResource("1_je4m1")]
-position = Vector2(3370, -532)
+position = Vector2(2856, -221)
 jumpSpeed = -2000
 
 [node name="floor" type="StaticBody2D" parent="."]
@@ -228,7 +228,7 @@ horizontal_alignment = 1
 [node name="ui" parent="CanvasLayer" instance=ExtResource("3_1pu4h")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3370, -450)
+position = Vector2(2851, -219)
 zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 position_smoothing_speed = 4.0
@@ -285,6 +285,7 @@ color = Color(1, 0, 0, 1)
 [node name="shop" type="Node2D" parent="."]
 
 [node name="shop" parent="shop" instance=ExtResource("6_nk0ok")]
+visible = false
 offset_left = 566.0
 offset_top = -439.0
 offset_right = 566.0
@@ -307,18 +308,19 @@ offset_top = -643.0
 offset_right = 1779.0
 offset_bottom = -558.0
 theme_override_font_sizes/font_size = 32
-text = "<- anything with a green border: 
-click to open menue"
+text = "<- anything with a green border means  
+you can click to open menue"
 
 [node name="cotton" type="Node2D" parent="."]
 
 [node name="cotton ui" parent="cotton" instance=ExtResource("8_770x0")]
+visible = false
 offset_left = 4599.0
 offset_top = -439.0
 offset_right = 4599.0
 offset_bottom = -439.0
 
-[node name="Button" type="Button" parent="cotton"]
+[node name="CButton" type="Button" parent="cotton"]
 offset_left = 4591.0
 offset_top = -649.0
 offset_right = 5318.0
@@ -341,4 +343,18 @@ editor_description = "a game where you hsave to stack a combination of baxes fro
 
 [node name="end" type="Node2D" parent="."]
 
+[node name="Label" type="Label" parent="."]
+offset_left = 2370.0
+offset_top = -575.0
+offset_right = 3349.0
+offset_bottom = -314.0
+theme_override_font_sizes/font_size = 32
+text = "Your goal is to unlock all of the steps to making 
+a t-shirt (to the right of thr world) .
+To unlock each one you have to buy it from the 
+shop (to the left of the world)
+
+A,D(left, right) + SPACE(jump) is to move around"
+
 [connection signal="pressed" from="shop/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="cotton/CButton" to="." method="_on_c_button_pressed"]
