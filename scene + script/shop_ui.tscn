@@ -117,7 +117,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
-text = "buy $50"
+text = "buy $25"
 
 [node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/cotton plant"]
 layout_mode = 2
