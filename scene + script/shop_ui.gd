@@ -14,3 +14,8 @@ func _process(delta: float) -> void:
 func _on_c_button_pressed() -> void:
 	GLOBAL.cotton = true
 	$"ColorRect/MarginContainer/VBoxContainer/cotton plant".hide()
+
+
+func _on_m_button_pressed() -> void:
+	GLOBAL.machBought = true
+	$ColorRect/MarginContainer/VBoxContainer/Machines.hide()

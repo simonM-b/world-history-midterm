@@ -1,0 +1,223 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmqf2ypeu7cme"]
+
+[ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="1_2kpsr"]
+[ext_resource type="Script" uid="uid://dy237xtao6eyc" path="res://scene + script/machines_ui.gd" id="1_npwmm"]
+[ext_resource type="Script" uid="uid://intb3hg817o1" path="res://scene + script/mcotton.gd" id="3_xupji"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vhq6"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.9647059, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kpsr"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.9647059, 0, 1)
+
+[node name="machines ui" type="Control"]
+layout_mode = 3
+anchor_right = 0.619
+anchor_bottom = 0.716
+offset_right = -0.088012695
+offset_bottom = 0.031982422
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_npwmm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 709.0
+offset_bottom = 457.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 708.0
+offset_bottom = 455.0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "MACHINES"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="left" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_2vhq6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2vhq6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2kpsr")
+text = "<"
+
+[node name="right" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_2vhq6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2vhq6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2kpsr")
+text = ">"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 703.0
+offset_bottom = 386.0
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -95
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 175
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(4, 250)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(4, 250)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(4, 250)
+layout_mode = 2
+
+[node name="mc" type="Sprite2D" parent="."]
+position = Vector2(182, 334)
+scale = Vector2(10, 10)
+texture = ExtResource("1_2kpsr")
+region_enabled = true
+region_rect = Rect2(56, 40, 8, 8)
+
+[node name="cotton" type="Sprite2D" parent="."]
+position = Vector2(27.000015, 1207)
+scale = Vector2(10, 10)
+texture = ExtResource("1_2kpsr")
+region_enabled = true
+region_rect = Rect2(48, 40, 8, 8)
+script = ExtResource("3_xupji")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 46.0
+offset_right = 710.0
+offset_bottom = 457.0
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "to play mini game buy it 
+from the shop. (the shop is to the
+far left of the world.) Cost = $1000"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 5.0
+offset_right = 1400.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 32
+text = "Each     is a cotton.
+move the     with the 
+green arrow keys.
+Each time the cotton
+and     touch you get 
+50 points
+"
+
+[node name="mc2" type="Sprite2D" parent="Label"]
+position = Vector2(210, 61)
+scale = Vector2(6, 6)
+texture = ExtResource("1_2kpsr")
+region_enabled = true
+region_rect = Rect2(56, 40, 8, 8)
+
+[node name="mc3" type="Sprite2D" parent="Label"]
+position = Vector2(108, 193)
+scale = Vector2(6, 6)
+texture = ExtResource("1_2kpsr")
+region_enabled = true
+region_rect = Rect2(56, 40, 8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(130, 21)
+scale = Vector2(6, 6)
+texture = ExtResource("1_2kpsr")
+region_enabled = true
+region_rect = Rect2(48, 40, 8, 8)
+
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/right" to="." method="_on_right_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

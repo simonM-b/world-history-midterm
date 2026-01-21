@@ -1,6 +1,6 @@
 extends Sprite2D
 
-var health = randi_range(1,1)
+var health = randi_range(2,3)
 var healthDamage = 1
 var minimumHealth = 0
 

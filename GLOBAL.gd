@@ -11,6 +11,8 @@ var money = 0
 var mapProgress = 0
 
 var cotton = false
+var machon = false
+var machBought = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

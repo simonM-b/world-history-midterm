@@ -1,0 +1,44 @@
+extends Control
+
+var listOfPosX = [182.0,361.0,540.0]
+var poslist = 1
+
+var topY = 75.0
+
+@onready var cottonSPRITE = $cotton
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	$mc.position.x = listOfPosX[poslist]
+
+
+func _on_left_pressed() -> void:
+	if poslist >= 1:
+		poslist -= 1
+	else:
+		poslist = 2
+
+
+func _on_right_pressed() -> void:
+	if poslist <= 1:
+		poslist += 1
+	else:
+		poslist = 0
+		
+		
+func spawnInCotton():
+	var rand = randi_range(0,2)
+	var cloned_node = cottonSPRITE.duplicate(15)
+	cloned_node.position = Vector2(listOfPosX[rand],topY)
+	add_child(cloned_node)
+	
+
+
+func _on_timer_timeout() -> void:
+	if GLOBAL.machBought and GLOBAL.machon:
+		spawnInCotton()
