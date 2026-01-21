@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://4h0woiqtom6k"]
+
+[ext_resource type="Script" uid="uid://c5c1xktntdkw8" path="res://scene + script/block.gd" id="1_kwav1"]
+[ext_resource type="Shader" uid="uid://dowa4y86bafy2" path="res://scene + script/block.tres" id="2_uqbt6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbuti"]
+shader = ExtResource("2_uqbt6")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqbt6"]
+size = Vector2(123, 34)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbuti"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqo7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e28fi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hcdja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_170lu"]
+
+[node name="block" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_kwav1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_tbuti")
+offset_left = 123.321266
+offset_right = 157.31671
+offset_bottom = 123.32127
+rotation = 1.5707964
+mouse_filter = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(61.5, 17)
+shape = SubResource("RectangleShape2D_uqbt6")
+
+[node name="block" type="Button" parent="."]
+offset_right = 123.0
+offset_bottom = 34.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tbuti")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cqo7b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e28fi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hcdja")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_170lu")
+
+[connection signal="button_down" from="block" to="." method="_on_block_button_down"]
+[connection signal="button_up" from="block" to="." method="_on_block_button_up"]
