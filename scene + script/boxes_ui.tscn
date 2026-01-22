@@ -142,4 +142,43 @@ mouse_filter = 2
 wait_time = 0.1
 one_shot = true
 
+[node name="loading" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 40.0
+offset_right = 709.0
+offset_bottom = 354.0
+
+[node name="Label" type="Label" parent="loading"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 32.0
+offset_right = 384.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Loading..."
+
+[node name="loading time" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 46.0
+offset_right = 710.0
+offset_bottom = 457.0
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "to play mini game buy it 
+from the shop. (the shop is to the
+far left of the world.) Cost = $1000"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="loading time" to="." method="_on_loading_time_timeout"]

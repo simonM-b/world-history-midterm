@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctolj4bi6ti8s"]
+
+[ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="1_1o1rc"]
+[ext_resource type="Script" uid="uid://intb3hg817o1" path="res://scene + script/mcotton.gd" id="2_qfwf6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1o1rc"]
+radius = 3.6013894
+
+[node name="cotton" type="Sprite2D"]
+position = Vector2(4.053116e-06, -7.748605e-06)
+scale = Vector2(10, 10)
+texture = ExtResource("1_1o1rc")
+region_enabled = true
+region_rect = Rect2(48, 40, 8, 8)
+script = ExtResource("2_qfwf6")
+
+[node name="Area2D" type="Area2D" parent="." groups=["cotton mach"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.50000036, -0.49999902)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("CircleShape2D_1o1rc")

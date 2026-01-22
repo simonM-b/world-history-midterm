@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmqf2ypeu7cme"]
+[gd_scene load_steps=5 format=3 uid="uid://cmqf2ypeu7cme"]
 
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="1_2kpsr"]
 [ext_resource type="Script" uid="uid://dy237xtao6eyc" path="res://scene + script/machines_ui.gd" id="1_npwmm"]
-[ext_resource type="Script" uid="uid://intb3hg817o1" path="res://scene + script/mcotton.gd" id="3_xupji"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vhq6"]
 bg_color = Color(1, 1, 1, 0)
@@ -152,14 +151,6 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_2kpsr")
 region_enabled = true
 region_rect = Rect2(56, 40, 8, 8)
-
-[node name="cotton" type="Sprite2D" parent="."]
-position = Vector2(27.000015, 1207)
-scale = Vector2(10, 10)
-texture = ExtResource("1_2kpsr")
-region_enabled = true
-region_rect = Rect2(48, 40, 8, 8)
-script = ExtResource("3_xupji")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

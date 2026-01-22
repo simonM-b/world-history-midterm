@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(dFelta: float) -> void:
 	if position.y != 1207.0:
 		position.y += speed
 		if position.y >= killHeight:

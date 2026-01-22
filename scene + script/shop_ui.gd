@@ -19,3 +19,8 @@ func _on_c_button_pressed() -> void:
 func _on_m_button_pressed() -> void:
 	GLOBAL.machBought = true
 	$ColorRect/MarginContainer/VBoxContainer/Machines.hide()
+
+
+func _on_b_b_button_pressed() -> void:
+	GLOBAL.boxes = true
+	$ColorRect/MarginContainer/VBoxContainer/boxes.hide()
