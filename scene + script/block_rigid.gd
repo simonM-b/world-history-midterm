@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 signal clicked
+signal onFloor
 
 var held = false
 
@@ -8,6 +9,9 @@ var offset = 0
 
 var yMultipyer = 1
 var yML = [0.2,0.5,1,1.2,1.5,1.7,2,2.5]
+
+var canBeExamined = false
+
 
 func _ready() -> void:
 	var ym = yML[yMultipyer]
@@ -31,6 +35,12 @@ func _physics_process(delta):
 		rotation = 0
 		global_transform.origin = get_global_mouse_position() + offset
 		
+	if held == false and $RayCast2D.is_colliding():
+		canBeExamined = true
+		#print("can be examined")
+	else:
+		canBeExamined = false
+		
 func pickup():
 	if held:
 		return
@@ -42,3 +52,4 @@ func drop(impulse=Vector2.ZERO):
 		freeze = false
 		apply_central_impulse(impulse)
 		held = false
+		

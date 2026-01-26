@@ -15,6 +15,14 @@ var machon = false
 var machBought = false
 var boxes = false
 
+var minigameMoney = {
+	button = 1,
+	cotton = 5,
+	machines = 50,
+	people = 500,
+	boxes = 5000
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

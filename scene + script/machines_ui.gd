@@ -47,3 +47,9 @@ func spawnInCotton():
 func _on_timer_timeout() -> void:
 	if GLOBAL.machBought and GLOBAL.machon:
 		spawnInCotton()
+
+
+func _on_mc_coll_area_entered(area: Area2D) -> void:
+	if area.is_in_group("cotton mach"):
+		GLOBAL.money += GLOBAL.minigameMoney.machines
+		area.queue_free()

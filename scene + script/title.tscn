@@ -98,7 +98,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("4_j27sm")
 theme_override_styles/pressed = ExtResource("4_j27sm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
-text = " SETTINGS "
+text = "   SETTINGS   "
 
 [node name="credits" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2

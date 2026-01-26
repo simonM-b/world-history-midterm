@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_play_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scene + script/main.tscn")
 
 
 func _on_settings_pressed() -> void:

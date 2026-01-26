@@ -56,6 +56,7 @@ layout_mode = 2
 theme_override_constants/separation = 34
 
 [node name="walking speed" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 
@@ -159,6 +160,7 @@ theme_override_font_sizes/font_size = 25
 text = "Machines"
 
 [node name="people" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 
@@ -225,6 +227,7 @@ theme_override_font_sizes/font_size = 25
 text = "Shipping boxes"
 
 [node name="make a shirt" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 

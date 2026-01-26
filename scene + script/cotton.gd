@@ -15,7 +15,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if health <= minimumHealth:
 		killed.emit()
-		GLOBAL.money += 5
+		GLOBAL.money += GLOBAL.minigameMoney.cotton
 		queue_free()
 
 

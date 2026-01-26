@@ -55,7 +55,7 @@ func handleSpriteFlip():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("button"):
 		print("money: ",GLOBAL.money)
-		GLOBAL.money += 1
+		GLOBAL.money += GLOBAL.minigameMoney.button
 	#if area.is_in_group("shop area"):
 	#	GLOBAL.mapProgress = 0
 	#elif  area.is_in_group("button area"):

@@ -1,6 +1,6 @@
 extends Sprite2D
 
-var speed = 1
+var speed = 2
 var killHeight = 300
 
 # Called when the node enters the scene tree for the first time.
