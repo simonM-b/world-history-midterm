@@ -56,11 +56,10 @@ layout_mode = 2
 theme_override_constants/separation = 34
 
 [node name="walking speed" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
-modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/walking speed"]
+[node name="WspButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/walking speed"]
 custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 focus_mode = 0
@@ -218,7 +217,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
-text = "buy $20000"
+text = "buy $45000"
 
 [node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/boxes"]
 layout_mode = 2
@@ -252,7 +251,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
-text = "buy $291100"
+text = "buy $500000"
 
 [node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/make a shirt"]
 layout_mode = 2
@@ -260,6 +259,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Finish the shirt"
 
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/walking speed/WspButton" to="." method="_on_wsp_button_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/cotton plant/CButton" to="." method="_on_c_button_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Machines/mButton" to="." method="_on_m_button_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/boxes/bBButton" to="." method="_on_b_b_button_pressed"]

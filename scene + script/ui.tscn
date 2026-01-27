@@ -23,7 +23,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
-text = "money:00000000"
+text = "$$$$:00000000"
 
 [node name="slider label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
@@ -107,3 +107,31 @@ offset_right = 784.8607
 offset_bottom = 119.999985
 rotation = -0.54481465
 text = "--->"
+
+[node name="money" type="Button" parent="."]
+layout_mode = 0
+offset_top = 61.0
+offset_right = 8.0
+offset_bottom = 69.0
+focus_mode = 0
+text = "+100"
+
+[node name="moneyii" type="Button" parent="."]
+layout_mode = 0
+offset_top = 124.0
+offset_right = 52.0
+offset_bottom = 153.0
+focus_mode = 0
+text = "+1000"
+
+[node name="moneym" type="Button" parent="."]
+layout_mode = 0
+offset_top = 92.0
+offset_right = 52.0
+offset_bottom = 121.0
+focus_mode = 0
+text = "-100"
+
+[connection signal="pressed" from="money" to="." method="_on_money_pressed"]
+[connection signal="pressed" from="moneyii" to="." method="_on_moneyii_pressed"]
+[connection signal="pressed" from="moneym" to="." method="_on_moneym_pressed"]

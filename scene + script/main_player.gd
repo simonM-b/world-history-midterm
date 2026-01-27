@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 1200
-@export var jumpSpeed = -1800
+@export var jumpSpeed = -2000
 @export var gravity = 8000
 @export_range(0.0, 1.0) var friction = 0.1
 @export_range(0.0 , 1.0) var acceleration = 0.25
@@ -10,10 +9,21 @@ extends CharacterBody2D
 @onready var sprite = $AnimatedSprite2D
 
 var canJump = false
+var speed = GLOBAL.pSpeed
 
 
 
 func _physics_process(delta):
+	if GLOBAL.allowMoreSpeed:
+		$Label.show()
+	else:
+		$Label.hide()
+	
+	if Input.is_action_pressed("2x speed") and GLOBAL.allowMoreSpeed:
+		speed = GLOBAL.xPSpeed
+	else:
+		speed = GLOBAL.pSpeed
+	
 	GLOBAL.mapProgress = ((900 - position.x)/2000 )*-1
 	#print(GLOBAL.mapProgress)
 	

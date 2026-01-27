@@ -51,7 +51,9 @@ shape = SubResource("CapsuleShape2D_acwip")
 [node name="jumpray" type="RayCast2D" parent="."]
 target_position = Vector2(0, 400)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Mplayer"]]
+collision_layer = 2049
+collision_mask = 2049
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_w0r2c")
@@ -62,5 +64,15 @@ scale = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_5h1l8")
 animation = &"new_animation"
 frame = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -118.0
+offset_top = -137.0
+offset_right = 113.0
+offset_bottom = -72.0
+theme_override_font_sizes/font_size = 24
+text = "hold SHIFT for 
+2x speed"
+horizontal_alignment = 1
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

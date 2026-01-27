@@ -5,6 +5,10 @@ var lastMovePress
 
 var playerPos
 var playerVel
+var pSpeed = 1200
+var xPSpeed = 2400
+var allowMoreSpeed = false
+
 
 var money = 0
 
@@ -21,6 +25,15 @@ var minigameMoney = {
 	machines = 50,
 	people = 500,
 	boxes = 5000
+}
+
+var shopCostItem = {
+	speed = 100,
+	cotton = 25,
+	machines = 1000,
+	people = 9000,
+	boxes = 20000,
+	end = 291100
 }
 
 # Called when the node enters the scene tree for the first time.

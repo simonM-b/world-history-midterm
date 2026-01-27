@@ -12,18 +12,29 @@ func _process(delta: float) -> void:
 
 
 func _on_c_button_pressed() -> void:
-	if GLOBAL.money >= 25:
+	if GLOBAL.money >= GLOBAL.shopCostItem.cotton:
+		GLOBAL.money -= GLOBAL.shopCostItem.cotton
 		GLOBAL.cotton = true
 		$"ColorRect/MarginContainer/VBoxContainer/cotton plant".hide()
 
 
 func _on_m_button_pressed() -> void:
-	if GLOBAL.money >= 1000:
+	if GLOBAL.money >= GLOBAL.shopCostItem.machines:
+		GLOBAL.money -= GLOBAL.shopCostItem.machines
 		GLOBAL.machBought = true
 		$ColorRect/MarginContainer/VBoxContainer/Machines.hide()
 
 
 func _on_b_b_button_pressed() -> void:
-	if GLOBAL.money >= 20000:
+	if GLOBAL.money >= GLOBAL.shopCostItem.boxes:
+		GLOBAL.money -= GLOBAL.shopCostItem.boxes
 		GLOBAL.boxes = true
 		$ColorRect/MarginContainer/VBoxContainer/boxes.hide()
+
+
+
+func _on_wsp_button_pressed() -> void:
+	if GLOBAL.money >= GLOBAL.shopCostItem.speed:
+		GLOBAL.money -= GLOBAL.shopCostItem.speed
+		GLOBAL.allowMoreSpeed = true
+		$"ColorRect/MarginContainer/VBoxContainer/walking speed".hide()

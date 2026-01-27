@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmqf2ypeu7cme"]
+[gd_scene load_steps=7 format=3 uid="uid://cmqf2ypeu7cme"]
 
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="1_2kpsr"]
 [ext_resource type="Script" uid="uid://dy237xtao6eyc" path="res://scene + script/machines_ui.gd" id="1_npwmm"]
@@ -21,6 +21,9 @@ border_color = Color(0, 0.9647059, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npwmm"]
 size = Vector2(8.300002, 4.0999994)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xupji"]
+size = Vector2(1446, 652)
 
 [node name="machines ui" type="Control"]
 layout_mode = 3
@@ -195,7 +198,7 @@ move the     with the
 green arrow keys.
 Each time the cotton
 and     touch you get 
-50 points
+$50
 "
 
 [node name="mc2" type="Sprite2D" parent="Label"]
@@ -219,7 +222,19 @@ texture = ExtResource("1_2kpsr")
 region_enabled = true
 region_rect = Rect2(48, 40, 8, 8)
 
+[node name="Area2D" type="Area2D" parent="."]
+process_mode = 3
+collision_layer = 2048
+collision_mask = 2048
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+process_mode = 3
+position = Vector2(355, 258)
+shape = SubResource("RectangleShape2D_xupji")
+
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/right" to="." method="_on_right_pressed"]
 [connection signal="area_entered" from="mc/mc coll" to="." method="_on_mc_coll_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

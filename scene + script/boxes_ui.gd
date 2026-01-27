@@ -141,7 +141,7 @@ func _on_overide_pressed() -> void:
 	
 func checkBlockCorrectOrder():
 	if otime:
-		print(sizeList)
+		#print(sizeList)
 		var arr = sizeList
 		for i in range(arr.size() - 1):
 			
@@ -150,7 +150,7 @@ func checkBlockCorrectOrder():
 				return null
 				
 		$"after correct reset timer".start()
-		print("correct")
+		#print("correct")
 		otime = false
 
 

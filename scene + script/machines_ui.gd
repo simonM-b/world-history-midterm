@@ -8,10 +8,12 @@ var poslist = 1
 var topY = 75.0
 var held_object = null
 
+
 @onready var cottonSPRITE = $cotton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_DISABLED
 	$ColorRect2.show()
 
 
@@ -53,3 +55,17 @@ func _on_mc_coll_area_entered(area: Area2D) -> void:
 	if area.is_in_group("cotton mach"):
 		GLOBAL.money += GLOBAL.minigameMoney.machines
 		area.queue_free()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Mplayer"):
+		process_mode = Node.PROCESS_MODE_INHERIT
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("Mplayer"):
+		process_mode = Node.PROCESS_MODE_DISABLED
+		
+		
+		
+		
