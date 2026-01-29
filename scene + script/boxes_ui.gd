@@ -12,6 +12,7 @@ var otime = true
 
 var sizeList = [100,100,100,100,100]
 
+
 @onready var ray0 = $"stack checker/ray0"
 @onready var ray1 = $"stack checker/ray1"
 @onready var ray2 = $"stack checker/ray2"
@@ -146,7 +147,7 @@ func checkBlockCorrectOrder():
 		for i in range(arr.size() - 1):
 			
 			if arr[i] >= arr[i + 1] or arr[i] == 100:
-				print("wrong")
+				#print("wrong")
 				return null
 				
 		$"after correct reset timer".start()
@@ -156,3 +157,12 @@ func checkBlockCorrectOrder():
 
 func _on_after_correct_reset_timer_timeout() -> void:
 	restart()
+
+
+func _on_mouse_detector_mouse_entered() -> void:
+	pass
+
+
+func _on_mouse_detector_mouse_shape_entered(shape_idx: int) -> void:
+	#print("AAAASDD")
+	GLOBAL.mouseIsBack.emit()

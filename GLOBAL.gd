@@ -9,6 +9,7 @@ var pSpeed = 1200
 var xPSpeed = 2400
 var allowMoreSpeed = false
 
+signal mouseIsBack
 
 var money = 0
 
