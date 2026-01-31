@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhyb2n8hqkea"]
 
-[node name="people ui" type="Control"]
+[node name="people ui" type="Control" unique_id=1792818350]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -8,13 +8,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=629101414]
 layout_mode = 0
 offset_right = 709.0
 offset_bottom = 457.0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=31178990]
 layout_mode = 0
 offset_right = 708.0
 offset_bottom = 455.0
@@ -24,81 +24,30 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=2059343548]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=159054491]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "PEOPLE"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=715520683]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="piller" type="ColorRect" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1443216845]
 layout_mode = 0
-offset_left = 336.0
-offset_top = 47.0
-offset_right = 376.0
-offset_bottom = 452.0
-
-[node name="block" type="ColorRect" parent="piller"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 40.0
-offset_right = 30.0
-offset_bottom = 60.0
-color = Color(0, 0, 0, 1)
-
-[node name="block2" type="ColorRect" parent="piller"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 100.0
-offset_right = 30.0
-offset_bottom = 120.0
-color = Color(0, 0, 0, 1)
-
-[node name="block3" type="ColorRect" parent="piller"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 160.0
-offset_right = 30.0
-offset_bottom = 180.0
-color = Color(0, 0, 0, 1)
-
-[node name="block4" type="ColorRect" parent="piller"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 220.0
-offset_right = 30.0
-offset_bottom = 240.0
-color = Color(0, 0, 0, 1)
-
-[node name="block5" type="ColorRect" parent="piller"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 280.0
-offset_right = 30.0
-offset_bottom = 300.0
-color = Color(0, 0, 0, 1)
-
-[node name="block6" type="ColorRect" parent="piller"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 340.0
-offset_right = 30.0
-offset_bottom = 360.0
-color = Color(0, 0, 0, 1)
-
-[node name="needle" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 97.0
-offset_top = 162.0
-offset_right = 164.0
-offset_bottom = 167.0
+offset_left = 24.0
+offset_top = 75.0
+offset_right = 1879.0
+offset_bottom = 96.0
+text = "picks a random map (there will be 10 maps)
+ and then you have to move your 
+mouse though the maze to gert to the person on the 
+end of it. the mouse cannot touch any walls of the maze"

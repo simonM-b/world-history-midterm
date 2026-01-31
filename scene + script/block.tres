@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://dowa4y86bafy2"]
+[gd_resource type="VisualShader" format=3 uid="uid://dowa4y86bafy2"]
 
 [sub_resource type="Gradient" id="Gradient_26lgl"]
 interpolation_color_space = 2
@@ -11,24 +11,6 @@ gradient = SubResource("Gradient_26lgl")
 texture = SubResource("GradientTexture1D_pw6s4")
 
 [resource]
-code = "shader_type canvas_item;
-render_mode blend_mix;
-
-uniform sampler2D tex_vtx_2;
-
-
-
-void vertex() {
-// Texture2D:2
-	vec4 n_out2p0 = texture(tex_vtx_2, UV);
-
-
-// Output:0
-	COLOR.a = n_out2p0.x;
-
-
-}
-"
 mode = 1
 flags/light_only = false
 nodes/vertex/0/position = Vector2(560, 180)

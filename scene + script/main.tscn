@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cxmrpr3dkaduq"]
+[gd_scene format=4 uid="uid://cxmrpr3dkaduq"]
 
 [ext_resource type="PackedScene" uid="uid://dm08rkou3jlh" path="res://scene + script/main_player.tscn" id="1_je4m1"]
 [ext_resource type="Script" uid="uid://cbogkax30lrxk" path="res://scene + script/main.gd" id="1_ywfar"]
@@ -161,60 +161,60 @@ border_width_right = 12
 border_width_bottom = 12
 border_color = Color(0, 0.9647059, 0, 1)
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" unique_id=1036011389]
 script = ExtResource("1_ywfar")
 metadata/_edit_vertical_guides_ = [0.0, -501.0]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=144584888]
 texture_filter = 1
 position = Vector2(-1, 0)
 scale = Vector2(16, 16)
 tile_map_data = PackedByteArray("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AABdAAAAAAABAAAAAABeAAAAAAABAAAAAABfAAAAAAABAAAAAABgAAAAAAABAAAAAABhAAAAAAABAAAAAABiAAAAAAABAAAAAABjAAAAAAABAAAAAABkAAAAAAABAAAAAABlAAAAAAABAAAAAABmAAAAAAABAAAAAABnAAAAAAABAAAAAABoAAAAAAABAAAAAABpAAAAAAABAAAAAABqAAAAAAABAAAAAABrAAAAAAABAAAAAABsAAAAAAABAAAAAABtAAAAAAABAAAAAABuAAAAAAABAAAAAABvAAAAAAABAAAAAABwAAAAAAABAAAAAABxAAAAAAABAAAAAAByAAAAAAABAAAAAABzAAAAAAABAAAAAAB0AAAAAAABAAAAAAB1AAAAAAABAAAAAAB2AAAAAAABAAAAAAB3AAAAAAABAAAAAAB4AAAAAAABAAAAAAB5AAAAAAABAAAAAAB6AAAAAAABAAAAAAB7AAAAAAABAAAAAAB8AAAAAAABAAAAAAB9AAAAAAABAAAAAAB+AAAAAAABAAAAAAB/AAAAAAABAAAAAACAAAAAAAABAAAAAACBAAAAAAABAAAAAACCAAAAAAABAAAAAACDAAAAAAABAAAAAACEAAAAAAABAAAAAACFAAAAAAABAAAAAACGAAAAAAABAAAAAABDAP7/AAAJAAMAAABEAP3/AAAKAAIAAABEAP7/AAAKAAMAAABEAP//AAAKAAQAAABFAP3/AAALAAIAAABFAP7/AAALAAMAAABFAP//AAALAAQAAABGAP3/AAAMAAIAAABGAP7/AAAMAAMAAABGAP//AAAMAAQAAABHAP7/AAANAAMAAABSAP7/AAAJAAMAAABTAP3/AAAKAAIAAABTAP7/AAAKAAMAAABTAP//AAAKAAQAAABUAP3/AAALAAIAAABUAP7/AAALAAMAAABUAP//AAALAAQAAABVAP3/AAAMAAIAAABVAP7/AAAMAAMAAABVAP//AAAMAAQAAABWAP7/AAANAAMAAABiAP7/AAAJAAMAAABjAP3/AAAKAAIAAABjAP7/AAAKAAMAAABjAP//AAAKAAQAAABkAP3/AAALAAIAAABkAP7/AAALAAMAAABkAP//AAALAAQAAABlAP3/AAAMAAIAAABlAP7/AAAMAAMAAABlAP//AAAMAAQAAABmAP7/AAANAAMAAAAyAPv/AAAMAAkAAAAzAPv/AAAAAAkAAAA0APv/AAACAAkAAAA1APv/AAAHAAkAAAA2APv/AAAIAAkAAAA3APv/AAANAAkAAAA4APv/AAAEAAkAAAA5APv/AAADAAsAAABSAPv/AAABAAkAAABTAPv/AAAOAAkAAABUAPv/AAAIAAsAAABVAPv/AAAEAAkAAABWAPv/AAADAAsAAABDAPv/AAAAAAsAAABEAPv/AAAEAAkAAABFAPv/AAAOAAkAAABGAPv/AAAAAAsAAABHAPv/AAAJAAkAAABIAPv/AAAEAAkAAABjAPv/AAAEAAkAAABkAPv/AAANAAkAAABlAPv/AAADAAkAAACHAPP/AAAAAAEAAACHAPT/AAAAAAEAAACHAPX/AAAAAAEAAACHAPb/AAAAAAEAAACHAPf/AAAAAAEAAACHAPj/AAAAAAEAAACHAPn/AAAAAAEAAACHAPr/AAAAAAEAAACHAPv/AAAAAAEAAACHAPz/AAAAAAEAAACHAP3/AAAAAAEAAACHAP7/AAAAAAEAAACHAP//AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_nk0ok")
 
-[node name="main player" parent="." instance=ExtResource("1_je4m1")]
+[node name="main player" parent="." unique_id=1500689702 instance=ExtResource("1_je4m1")]
 position = Vector2(2856, -221)
 
-[node name="floor" type="StaticBody2D" parent="."]
+[node name="floor" type="StaticBody2D" parent="." unique_id=809553956]
 
-[node name="floor" type="CollisionShape2D" parent="floor"]
+[node name="floor" type="CollisionShape2D" parent="floor" unique_id=1736195091]
 shape = SubResource("WorldBoundaryShape2D_su6j1")
 
-[node name="start" type="CollisionShape2D" parent="floor"]
+[node name="start" type="CollisionShape2D" parent="floor" unique_id=2064512788]
 position = Vector2(975, 0)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_su6j1")
 
-[node name="end" type="CollisionShape2D" parent="floor"]
+[node name="end" type="CollisionShape2D" parent="floor" unique_id=1919166155]
 position = Vector2(12897, 0)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_su6j1")
 
-[node name="ColorRect" type="ColorRect" parent="floor"]
+[node name="ColorRect" type="ColorRect" parent="floor" unique_id=216009500]
 visible = false
 offset_left = -1835.0
 offset_right = 6466.0
 offset_bottom = 328.0
 color = Color(1, 0.7058824, 1, 0.16078432)
 
-[node name="button" type="StaticBody2D" parent="."]
+[node name="button" type="StaticBody2D" parent="." unique_id=957345891]
 position = Vector2(2821, -16)
 
-[node name="Area2D" type="Area2D" parent="button" groups=["button"]]
+[node name="Area2D" type="Area2D" parent="button" unique_id=347435128 groups=["button"]]
 
-[node name="ColorRect" type="ColorRect" parent="button/Area2D"]
+[node name="ColorRect" type="ColorRect" parent="button/Area2D" unique_id=1519539645]
 offset_left = -414.0
 offset_top = -35.0
 offset_right = 415.0
 offset_bottom = 36.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button/Area2D" unique_id=1595257273]
 shape = SubResource("RectangleShape2D_su6j1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button" unique_id=1902546780]
 shape = SubResource("RectangleShape2D_ywfar")
 
-[node name="Label" type="Label" parent="button"]
+[node name="Label" type="Label" parent="button" unique_id=95204605]
 offset_left = -412.0
 offset_top = -23.0
 offset_right = 411.0
@@ -224,21 +224,21 @@ theme_override_font_sizes/font_size = 32
 text = "BUTTON | 1 jump = $1"
 horizontal_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1653182066]
 
-[node name="ui" parent="CanvasLayer" instance=ExtResource("3_1pu4h")]
+[node name="ui" parent="CanvasLayer" unique_id=1152126485 instance=ExtResource("3_1pu4h")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=942692254]
 position = Vector2(2851, -219)
 zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 position_smoothing_speed = 4.0
 script = ExtResource("2_su6j1")
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Node" parent="." unique_id=1900099897]
 editor_description = "The cotton minigame will be you having to harvest cotton.($100 to open up the cotton farm)"
 
-[node name="ColorRect" type="ColorRect" parent="Node"]
+[node name="ColorRect" type="ColorRect" parent="Node" unique_id=893247941]
 editor_description = "1989"
 visible = false
 offset_left = 6799.0
@@ -247,7 +247,7 @@ offset_right = 6899.0
 offset_bottom = 28.0
 color = Color(1, 0, 0, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="Node"]
+[node name="ColorRect2" type="ColorRect" parent="Node" unique_id=94619108]
 editor_description = "1989"
 visible = false
 offset_left = 8788.0
@@ -256,7 +256,7 @@ offset_right = 8888.0
 offset_bottom = 28.0
 color = Color(1, 0, 0, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="Node"]
+[node name="ColorRect3" type="ColorRect" parent="Node" unique_id=110734498]
 editor_description = "1989"
 visible = false
 offset_left = 10777.0
@@ -265,7 +265,7 @@ offset_right = 10877.0
 offset_bottom = 28.0
 color = Color(1, 0, 0, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="Node"]
+[node name="ColorRect4" type="ColorRect" parent="Node" unique_id=1259026194]
 editor_description = "1989"
 visible = false
 offset_left = 12766.0
@@ -274,7 +274,7 @@ offset_right = 12866.0
 offset_bottom = 28.0
 color = Color(1, 0, 0, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="Node"]
+[node name="ColorRect5" type="ColorRect" parent="Node" unique_id=1230401015]
 editor_description = "1989"
 visible = false
 offset_left = 1027.0
@@ -283,16 +283,16 @@ offset_right = 1127.0
 offset_bottom = -8.0
 color = Color(1, 0, 0, 1)
 
-[node name="shop" type="Node2D" parent="."]
+[node name="shop" type="Node2D" parent="." unique_id=1855566297]
 
-[node name="shop" parent="shop" instance=ExtResource("6_nk0ok")]
+[node name="shop" parent="shop" unique_id=834413075 instance=ExtResource("6_nk0ok")]
 visible = false
 offset_left = 566.0
 offset_top = -439.0
 offset_right = 566.0
 offset_bottom = -439.0
 
-[node name="Button" type="Button" parent="shop"]
+[node name="Button" type="Button" parent="shop" unique_id=1759995240]
 offset_left = 625.0
 offset_top = -649.0
 offset_right = 1086.0
@@ -303,7 +303,7 @@ theme_override_styles/normal = ExtResource("7_73fyn")
 theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
-[node name="Label" type="Label" parent="shop"]
+[node name="Label" type="Label" parent="shop" unique_id=174495519]
 offset_left = 1121.0
 offset_top = -643.0
 offset_right = 1779.0
@@ -312,16 +312,16 @@ theme_override_font_sizes/font_size = 32
 text = "<- anything with a green border means  
 you can click to open menue"
 
-[node name="cotton" type="Node2D" parent="."]
+[node name="cotton" type="Node2D" parent="." unique_id=1608660984]
 
-[node name="cotton ui" parent="cotton" instance=ExtResource("8_770x0")]
+[node name="cotton ui" parent="cotton" unique_id=1816607854 instance=ExtResource("8_770x0")]
 visible = false
 offset_left = 4599.0
 offset_top = -439.0
 offset_right = 4599.0
 offset_bottom = -439.0
 
-[node name="CButton" type="Button" parent="cotton"]
+[node name="CButton" type="Button" parent="cotton" unique_id=742382199]
 offset_left = 4591.0
 offset_top = -649.0
 offset_right = 5318.0
@@ -332,9 +332,9 @@ theme_override_styles/normal = ExtResource("7_73fyn")
 theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
-[node name="machines" type="Node2D" parent="."]
+[node name="machines" type="Node2D" parent="." unique_id=1051356301]
 
-[node name="MButton2" type="Button" parent="machines"]
+[node name="MButton2" type="Button" parent="machines" unique_id=1023865310]
 offset_left = 6379.0
 offset_top = -649.0
 offset_right = 7362.0
@@ -345,22 +345,33 @@ theme_override_styles/normal = ExtResource("7_73fyn")
 theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
-[node name="machines ui" parent="machines" instance=ExtResource("9_tcw5c")]
+[node name="machines ui" parent="machines" unique_id=2107096063 instance=ExtResource("9_tcw5c")]
 visible = false
 offset_left = 6524.0
 offset_top = -447.0
 offset_right = 6524.0
 offset_bottom = -446.96802
 
-[node name="people" type="Node2D" parent="."]
+[node name="people" type="Node2D" parent="." unique_id=521880270]
 
-[node name="boxes" type="Node2D" parent="."]
+[node name="PPLButton3" type="Button" parent="people" unique_id=624667060]
+offset_left = 8551.0
+offset_top = -649.0
+offset_right = 9285.0
+offset_bottom = -503.0
+focus_mode = 0
+mouse_behavior_recursive = 2
+theme_override_styles/normal = ExtResource("7_73fyn")
+theme_override_styles/pressed = ExtResource("7_73fyn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
+
+[node name="boxes" type="Node2D" parent="." unique_id=1141987325]
 editor_description = "a game where you hsave to stack a combination of baxes from one side to another
 
 - - -  -
 "
 
-[node name="BoButton3" type="Button" parent="boxes"]
+[node name="BoButton3" type="Button" parent="boxes" unique_id=1424773741]
 offset_left = 10473.0
 offset_top = -649.0
 offset_right = 11075.0
@@ -371,16 +382,16 @@ theme_override_styles/normal = ExtResource("7_73fyn")
 theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
-[node name="boxes ui" parent="boxes" instance=ExtResource("10_lqlp2")]
+[node name="boxes ui" parent="boxes" unique_id=393025139 instance=ExtResource("10_lqlp2")]
 visible = false
 offset_left = 10439.0
 offset_top = -447.0
 offset_right = 10439.0
 offset_bottom = -447.0
 
-[node name="end" type="Node2D" parent="."]
+[node name="end" type="Node2D" parent="." unique_id=202265160]
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2033292755]
 offset_left = 2370.0
 offset_top = -623.0
 offset_right = 3349.0

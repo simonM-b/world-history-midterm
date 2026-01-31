@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct57t6uq16rb0"]
+[gd_scene format=3 uid="uid://ct57t6uq16rb0"]
 
 [ext_resource type="Script" uid="uid://dai6sfi1md358" path="res://scene + script/boxes_ui.gd" id="1_kdgxb"]
 
@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oa8dv"]
 size = Vector2(693, 304)
 
-[node name="boxes ui" type="Control"]
+[node name="boxes ui" type="Control" unique_id=1755007154]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,13 +17,13 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kdgxb")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=485209702]
 layout_mode = 0
 offset_right = 709.0
 offset_bottom = 457.0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1281601837]
 layout_mode = 0
 offset_right = 708.0
 offset_bottom = 455.0
@@ -33,24 +33,24 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=682798062]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=16667338]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "BOXES"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1831514496]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=312256354]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 359.0
@@ -60,7 +60,7 @@ theme_override_font_sizes/font_size = 32
 text = "Move boxes from side A to side B
 if in the correct order get $500"
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=252153623]
 layout_mode = 0
 offset_left = 530.0
 offset_top = 66.0
@@ -69,7 +69,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 32
 text = "B"
 
-[node name="Label3" type="Label" parent="."]
+[node name="Label3" type="Label" parent="." unique_id=1369946864]
 layout_mode = 0
 offset_left = 37.0
 offset_top = 66.0
@@ -78,7 +78,7 @@ offset_bottom = 107.0
 theme_override_font_sizes/font_size = 32
 text = "A"
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=896102433]
 layout_mode = 0
 offset_left = 352.0
 offset_top = 47.0
@@ -86,75 +86,75 @@ offset_right = 358.0
 offset_bottom = 359.0
 color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["walls"]]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=69807869 groups=["walls"]]
 position = Vector2(27, 356)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=226791756]
 position = Vector2(329, -1)
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=503443095]
 position = Vector2(328.99997, -307)
 rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=844617037]
 position = Vector2(-18, -184)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1003917524]
 position = Vector2(677, -184)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=169129538]
 offset_left = -17.0
 offset_top = -2.0
 offset_right = 677.0
 offset_bottom = 3.0
 mouse_filter = 2
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["stop wals"]]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2085839328 groups=["stop wals"]]
 position = Vector2(27, 356)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1396994719]
 position = Vector2(329, 7)
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2" unique_id=632174539]
 position = Vector2(329, -315)
 rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1073042177]
 position = Vector2(-26, -184)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1586410525]
 position = Vector2(685, -184)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_oa8dv")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=1893356282]
 offset_left = -17.0
 offset_top = -2.0
 offset_right = 677.0
 offset_bottom = 3.0
 mouse_filter = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=508409177]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1238695026]
 layout_mode = 0
 offset_left = 562.0
 offset_top = 106.0
@@ -162,7 +162,7 @@ offset_right = 648.0
 offset_bottom = 125.0
 mouse_filter = 2
 
-[node name="ColorRect2" type="ColorRect" parent="Control"]
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=1847239334]
 layout_mode = 0
 offset_left = 577.0
 offset_top = 88.0
@@ -170,7 +170,7 @@ offset_right = 633.0
 offset_bottom = 107.0
 mouse_filter = 2
 
-[node name="ColorRect3" type="ColorRect" parent="Control"]
+[node name="ColorRect3" type="ColorRect" parent="Control" unique_id=1937565538]
 layout_mode = 0
 offset_left = 593.0
 offset_top = 70.0
@@ -178,20 +178,20 @@ offset_right = 617.0
 offset_bottom = 89.0
 mouse_filter = 2
 
-[node name="blocks" type="Node2D" parent="."]
+[node name="blocks" type="Node2D" parent="." unique_id=1113573875]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=680273871]
 wait_time = 0.1
 one_shot = true
 
-[node name="loading" type="ColorRect" parent="."]
+[node name="loading" type="ColorRect" parent="." unique_id=2046432879]
 visible = false
 layout_mode = 0
 offset_top = 40.0
 offset_right = 709.0
 offset_bottom = 354.0
 
-[node name="Label" type="Label" parent="loading"]
+[node name="Label" type="Label" parent="loading" unique_id=227692678]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 32.0
@@ -201,18 +201,18 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Loading..."
 
-[node name="loading time" type="Timer" parent="."]
+[node name="loading time" type="Timer" parent="." unique_id=1103640800]
 wait_time = 0.1
 one_shot = true
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=37167072]
 visible = false
 layout_mode = 0
 offset_top = 46.0
 offset_right = 710.0
 offset_bottom = 457.0
 
-[node name="Label" type="Label" parent="ColorRect2"]
+[node name="Label" type="Label" parent="ColorRect2" unique_id=1912305997]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 21.0
@@ -223,46 +223,47 @@ from the shop. (the shop is to the
 far left of the world.) 
 Cost = $20000"
 
-[node name="stack checker" type="Node2D" parent="."]
+[node name="stack checker" type="Node2D" parent="." unique_id=54904691]
 
-[node name="ray0" type="RayCast2D" parent="stack checker"]
+[node name="ray0" type="RayCast2D" parent="stack checker" unique_id=434299347]
 position = Vector2(706, 201)
 target_position = Vector2(-350, 0)
 collision_mask = 6
 
-[node name="ray1" type="RayCast2D" parent="stack checker"]
+[node name="ray1" type="RayCast2D" parent="stack checker" unique_id=860999969]
 position = Vector2(706, 235)
 target_position = Vector2(-350, 0)
 collision_mask = 6
 
-[node name="ray2" type="RayCast2D" parent="stack checker"]
+[node name="ray2" type="RayCast2D" parent="stack checker" unique_id=1006570617]
 position = Vector2(706, 269)
 target_position = Vector2(-350, 0)
 collision_mask = 6
 
-[node name="ray3" type="RayCast2D" parent="stack checker"]
+[node name="ray3" type="RayCast2D" parent="stack checker" unique_id=900998827]
 position = Vector2(708, 304)
 target_position = Vector2(-350, 0)
 collision_mask = 6
 
-[node name="ray4" type="RayCast2D" parent="stack checker"]
+[node name="ray4" type="RayCast2D" parent="stack checker" unique_id=714649605]
 position = Vector2(708, 338)
 target_position = Vector2(-350, 0)
 collision_mask = 6
 
-[node name="overide" type="Button" parent="."]
+[node name="overide" type="Button" parent="." unique_id=529870881]
+visible = false
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "overide price"
 
-[node name="after correct reset timer" type="Timer" parent="."]
+[node name="after correct reset timer" type="Timer" parent="." unique_id=1403146010]
 wait_time = 0.2
 one_shot = true
 
-[node name="mouse detector" type="Area2D" parent="."]
+[node name="mouse detector" type="Area2D" parent="." unique_id=605821867]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse detector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse detector" unique_id=226208068]
 position = Vector2(356.5, 202)
 shape = SubResource("RectangleShape2D_oa8dv")
 
