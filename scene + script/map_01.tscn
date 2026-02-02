@@ -1,3 +1,30 @@
 [gd_scene format=3 uid="uid://cy4owutoioa7c"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pdptb"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kgje0"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gpsjr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v2pfp"]
+normal = Vector2(-1, 0)
+
 [node name="map01" type="Node2D" unique_id=1215337068]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=205338997]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1538799979]
+shape = SubResource("WorldBoundaryShape2D_pdptb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=974430507]
+shape = SubResource("WorldBoundaryShape2D_kgje0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=441643775]
+position = Vector2(1152, 648)
+shape = SubResource("WorldBoundaryShape2D_gpsjr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=1865435349]
+position = Vector2(1151, 648)
+shape = SubResource("WorldBoundaryShape2D_v2pfp")
