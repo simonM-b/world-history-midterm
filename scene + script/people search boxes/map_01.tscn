@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy4owutoioa7c"]
 
-[ext_resource type="Script" uid="uid://c1vt76d4dm3d6" path="res://scene + script/map_01.gd" id="1_gpsjr"]
-[ext_resource type="Texture2D" uid="uid://dlhj0vslk1e0c" path="res://images/map 01.png" id="1_kgje0"]
+[ext_resource type="Script" uid="uid://c1vt76d4dm3d6" path="res://scene + script/people search boxes/map_01.gd" id="1_asuwn"]
+[ext_resource type="Texture2D" uid="uid://dlhj0vslk1e0c" path="res://images/map 01.png" id="2_n2rqs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pdptb"]
 normal = Vector2(0, 1)
@@ -18,7 +18,7 @@ normal = Vector2(-1, 0)
 size = Vector2(81, 84)
 
 [node name="map01" type="Node2D" unique_id=1215337068]
-script = ExtResource("1_gpsjr")
+script = ExtResource("1_asuwn")
 
 [node name="borders2" type="Area2D" parent="." unique_id=205338997]
 
@@ -39,7 +39,7 @@ shape = SubResource("WorldBoundaryShape2D_v2pfp")
 [node name="Map01" type="Sprite2D" parent="." unique_id=798592819]
 position = Vector2(577.4091, 337.50003)
 scale = Vector2(1.4068183, 1.4068182)
-texture = ExtResource("1_kgje0")
+texture = ExtResource("2_n2rqs")
 
 [node name="start" type="ColorRect" parent="." unique_id=2138921081]
 offset_left = 40.0

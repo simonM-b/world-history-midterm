@@ -152,10 +152,13 @@ func checkBlockCorrectOrder():
 				
 		$"after correct reset timer".start()
 		#print("correct")
+		#winning condition
 		otime = false
 
 
 func _on_after_correct_reset_timer_timeout() -> void:
+	#if you win this happens
+	GLOBAL.money += GLOBAL.minigameMoney.boxes
 	restart()
 
 

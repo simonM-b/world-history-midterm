@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmqf2ypeu7cme"]
+[gd_scene format=3 uid="uid://cmqf2ypeu7cme"]
 
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="1_2kpsr"]
 [ext_resource type="Script" uid="uid://dy237xtao6eyc" path="res://scene + script/machines_ui.gd" id="1_npwmm"]
@@ -25,7 +25,7 @@ size = Vector2(8.300002, 4.0999994)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xupji"]
 size = Vector2(1446, 652)
 
-[node name="machines ui" type="Control"]
+[node name="machines ui" type="Control" unique_id=1112036223]
 layout_mode = 3
 anchor_right = 0.619
 anchor_bottom = 0.716
@@ -36,13 +36,13 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_npwmm")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=82692330]
 layout_mode = 0
 offset_right = 709.0
 offset_bottom = 457.0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=766893281]
 layout_mode = 0
 offset_right = 708.0
 offset_bottom = 455.0
@@ -52,30 +52,30 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=943729232]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=865664066]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "MACHINES"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=242204381]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1761815206]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer" unique_id=292999834]
 layout_mode = 2
 
-[node name="left" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="left" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=58262531]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 focus_mode = 0
@@ -98,7 +98,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2vhq6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2kpsr")
 text = "<"
 
-[node name="right" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="right" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer" unique_id=324908766]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 focus_mode = 0
@@ -121,62 +121,62 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2vhq6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2kpsr")
 text = ">"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2103827594]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 50.0
 offset_right = 703.0
 offset_bottom = 386.0
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=1525021342]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer" unique_id=209984624]
 layout_mode = 2
 theme_override_constants/margin_top = -95
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/MarginContainer" unique_id=490366659]
 layout_mode = 2
 theme_override_constants/separation = 175
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer" unique_id=1766207579]
 custom_minimum_size = Vector2(4, 250)
 layout_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer" unique_id=1100333304]
 custom_minimum_size = Vector2(4, 250)
 layout_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+[node name="ColorRect3" type="ColorRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer" unique_id=1752690694]
 custom_minimum_size = Vector2(4, 250)
 layout_mode = 2
 
-[node name="mc" type="Sprite2D" parent="."]
+[node name="mc" type="Sprite2D" parent="." unique_id=2102169478]
 position = Vector2(182, 334)
 scale = Vector2(10, 10)
 texture = ExtResource("1_2kpsr")
 region_enabled = true
 region_rect = Rect2(56, 40, 8, 8)
 
-[node name="mc coll" type="Area2D" parent="mc"]
+[node name="mc coll" type="Area2D" parent="mc" unique_id=974798724]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mc/mc coll"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mc/mc coll" unique_id=1105347556]
 position = Vector2(-0.45000076, 1.1499977)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_npwmm")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=756478691]
 wait_time = 1.5
 autostart = true
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1571621352]
 visible = false
 layout_mode = 0
 offset_top = 46.0
 offset_right = 710.0
 offset_bottom = 457.0
 
-[node name="Label" type="Label" parent="ColorRect2"]
+[node name="Label" type="Label" parent="ColorRect2" unique_id=80421951]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 21.0
@@ -186,7 +186,7 @@ text = "to play mini game buy it
 from the shop. (the shop is to the
 far left of the world.) Cost = $1000"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1035555160]
 layout_mode = 0
 offset_left = 713.0
 offset_top = 5.0
@@ -201,33 +201,33 @@ and     touch you get
 $50
 "
 
-[node name="mc2" type="Sprite2D" parent="Label"]
+[node name="mc2" type="Sprite2D" parent="Label" unique_id=45738850]
 position = Vector2(210, 61)
 scale = Vector2(6, 6)
 texture = ExtResource("1_2kpsr")
 region_enabled = true
 region_rect = Rect2(56, 40, 8, 8)
 
-[node name="mc3" type="Sprite2D" parent="Label"]
+[node name="mc3" type="Sprite2D" parent="Label" unique_id=1586844902]
 position = Vector2(108, 193)
 scale = Vector2(6, 6)
 texture = ExtResource("1_2kpsr")
 region_enabled = true
 region_rect = Rect2(56, 40, 8, 8)
 
-[node name="Sprite2D" type="Sprite2D" parent="Label"]
+[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=1224438672]
 position = Vector2(130, 21)
 scale = Vector2(6, 6)
 texture = ExtResource("1_2kpsr")
 region_enabled = true
 region_rect = Rect2(48, 40, 8, 8)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1290226004]
 process_mode = 3
 collision_layer = 2048
 collision_mask = 2048
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1538060824]
 process_mode = 3
 position = Vector2(355, 258)
 shape = SubResource("RectangleShape2D_xupji")

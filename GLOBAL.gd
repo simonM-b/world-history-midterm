@@ -20,7 +20,7 @@ var machon = false
 var machBought = false
 var boxes = false
 
-var minigameMoney = {
+var minigameMoney = { #The amount of money that you get if you win each minigame
 	button = 1,
 	cotton = 5,
 	machines = 50,
@@ -36,6 +36,8 @@ var shopCostItem = {
 	boxes = 20000,
 	end = 291100
 }
+
+var listOfMapPeopleMaps = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

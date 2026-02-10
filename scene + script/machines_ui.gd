@@ -52,7 +52,9 @@ func _on_timer_timeout() -> void:
 
 
 func _on_mc_coll_area_entered(area: Area2D) -> void:
+	print("kjnbgtyujnbvg")
 	if area.is_in_group("cotton mach"):
+		print("YOU GOT A COTTON")
 		GLOBAL.money += GLOBAL.minigameMoney.machines
 		area.queue_free()
 
