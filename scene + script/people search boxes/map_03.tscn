@@ -1,3 +1,167 @@
 [gd_scene format=3 uid="uid://mefsdshyufha"]
 
+[ext_resource type="Texture2D" uid="uid://77vkl2jbny7j" path="res://images/map_03.png" id="1_iq1g1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k128e"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gkfys"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pr6db"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4r433"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehx2c"]
+size = Vector2(81, 84)
+
 [node name="map_03" type="Node2D" unique_id=1858834230]
+
+[node name="borders2" type="Area2D" parent="." unique_id=356655009]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders2" unique_id=1151997876]
+shape = SubResource("WorldBoundaryShape2D_k128e")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="borders2" unique_id=189396318]
+shape = SubResource("WorldBoundaryShape2D_gkfys")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="borders2" unique_id=911008350]
+position = Vector2(1152, 648)
+shape = SubResource("WorldBoundaryShape2D_pr6db")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="borders2" unique_id=831250274]
+position = Vector2(1151, 648)
+shape = SubResource("WorldBoundaryShape2D_4r433")
+
+[node name="Map02" type="Sprite2D" parent="." unique_id=230694812]
+position = Vector2(577.4091, 337.50003)
+scale = Vector2(1.4068183, 1.4068182)
+texture = ExtResource("1_iq1g1")
+
+[node name="start" type="ColorRect" parent="." unique_id=689139462]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 121.025635
+offset_bottom = 119.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="start" unique_id=1833126102]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "start"
+
+[node name="start detect" type="Area2D" parent="start" unique_id=1205656045]
+position = Vector2(5, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="start/start detect" unique_id=688583077]
+position = Vector2(35.5, 35)
+shape = SubResource("RectangleShape2D_ehx2c")
+
+[node name="end" type="ColorRect" parent="." unique_id=1735595495]
+offset_left = 538.0
+offset_top = 529.0
+offset_right = 619.02563
+offset_bottom = 608.0
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="end" unique_id=2054009868]
+layout_mode = 0
+offset_right = 55.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "end"
+
+[node name="end detect" type="Area2D" parent="end" unique_id=1716200469]
+position = Vector2(10, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end/end detect" unique_id=1142556796]
+position = Vector2(30.5, 32)
+shape = SubResource("RectangleShape2D_ehx2c")
+
+[node name="borders" type="Control" parent="." unique_id=1813121679]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect5" type="ColorRect" parent="borders" unique_id=462377028]
+layout_mode = 0
+offset_left = 1127.0
+offset_top = 587.469
+offset_right = 1187.531
+offset_bottom = 729.34564
+rotation = 1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="borders" unique_id=268995481]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 40.0
+offset_bottom = 651.0
+
+[node name="ColorRect2" type="ColorRect" parent="borders" unique_id=244997064]
+layout_mode = 0
+offset_left = 1112.0
+offset_top = -2.0
+offset_right = 1152.0
+offset_bottom = 652.0
+
+[node name="ColorRect3" type="ColorRect" parent="borders" unique_id=316358820]
+layout_mode = 0
+offset_left = 1127.0
+offset_right = 1167.0
+offset_bottom = 1116.7472
+rotation = 1.5707964
+
+[node name="ColorRect4" type="ColorRect" parent="borders" unique_id=1860455471]
+layout_mode = 0
+offset_left = 1127.0
+offset_top = 608.0
+offset_right = 1167.0
+offset_bottom = 1724.7472
+rotation = 1.5707964
+
+[node name="Label" type="Label" parent="." unique_id=966521585]
+offset_left = 55.0
+offset_top = 378.0
+offset_right = 549.0
+offset_bottom = 399.0
+text = "This mini-game is played best 
+when on fullscreen."
+
+[node name="show where to put mousew" type="ColorRect" parent="." unique_id=1123782245]
+visible = false
+offset_left = 121.0
+offset_top = 23.0
+offset_right = 1115.0
+offset_bottom = 619.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.5882353)
+
+[node name="ColorRect2" type="ColorRect" parent="show where to put mousew" unique_id=568616979]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 93.0
+offset_bottom = 596.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.5882353)
+
+[node name="Label" type="Label" parent="show where to put mousew" unique_id=901503512]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 43.0
+offset_right = 719.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "<-- PLACE MOUSE INTO START BOX 
+TO START GAME"
+
+[node name="allowed mouse area" type="Area2D" parent="." unique_id=1339236567]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="allowed mouse area" unique_id=1319731840]
+position = Vector2(676.2543, 265.6468)
+polygon = PackedVector2Array(-591.2543, -168.64679, -578.2543, -146.64679, -553.2543, -113.64679, -518.2543, -85.64679, -463.25427, -70.64679, -383.25427, -71.64679, -218.25427, -99.64679, -111.25427, -128.64679, -15.254272, -138.64679, 91.74573, -139.64679, 146.74573, -130.64679, 237.74573, -114.64679, 280.74573, -89.64679, 305.74573, -39.64679, 319.74573, 83.35321, 318.74573, 141.35321, 288.74573, 176.35321, 279.74573, 131.35321, 283.74573, 41.35321, 268.74573, -0.64678955, 255.74573, -23.64679, 230.74573, -28.64679, 80.74573, -31.64679, -16.254272, -41.64679, -82.25427, -37.64679, -235.25427, -2.6467896, -390.25427, 32.35321, -438.25427, 48.35321, -467.25427, 71.35321, -470.25427, 99.35321, -448.25427, 126.35321, -386.25427, 190.35321, -312.25427, 237.35321, -178.25427, 296.3532, -139.25427, 313.3532, -124.25427, 319.3532, -108.25427, 293.3532, -124.25427, 269.3532, -183.25427, 250.35321, -310.25427, 195.35321, -371.25427, 151.35321, -428.25427, 91.35321, -406.25427, 75.35321, -313.25427, 54.35321, -190.25427, 28.35321, -176.25427, 20.35321, -123.25427, 22.35321, -61.254272, 30.35321, 28.745728, 39.35321, -27.254272, 57.35321, -135.25427, 71.35321, -157.25427, 88.35321, -156.25427, 186.35321, -167.25427, 259.3532, -132.25427, 269.3532, -120.25427, 175.35321, -124.25427, 120.35321, -119.25427, 106.35321, 15.745728, 88.35321, 55.745728, 74.35321, 91.74573, 42.35321, 89.74573, 17.35321, 56.745728, 7.3532104, -26.254272, -4.6467896, 73.74573, 1.3532104, 147.74573, 4.3532104, 218.74573, 1.3532104, 236.74573, 13.35321, 247.74573, 61.35321, 245.74573, 170.35321, 256.74573, 205.35321, 274.74573, 218.35321, 298.74573, 216.35321, 354.74573, 158.35321, 355.74573, 127.35321, 354.74573, 23.35321, 337.74573, -71.64679, 311.74573, -112.64679, 272.74573, -141.64679, 221.74573, -157.64679, 123.74573, -171.64679, 94.74573, -176.64679, 12.745728, -175.64679, -53.254272, -172.64679, -137.25427, -161.64679, -253.25427, -131.64679, -423.25427, -105.64679, -481.25427, -114.64679, -530.2543, -138.64679, -559.2543, -195.64679, -578.2543, -204.64679)
