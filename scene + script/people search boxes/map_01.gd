@@ -4,6 +4,8 @@ var mouseIsInStartBox = false
 var mouseReachedEnd = false
 var mouseIsInCorrectLane = false
 
+#connect the start detector mouse entered and mouse exited <- do the same fir the edn detector. Also do the same for thr allowed mouse area.
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
