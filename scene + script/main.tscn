@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://burcj3s0a061r" path="res://scene + script/cotton_ui.tscn" id="8_770x0"]
 [ext_resource type="PackedScene" uid="uid://cmqf2ypeu7cme" path="res://scene + script/machines_ui.tscn" id="9_tcw5c"]
 [ext_resource type="PackedScene" uid="uid://ct57t6uq16rb0" path="res://scene + script/boxes_ui.tscn" id="10_lqlp2"]
+[ext_resource type="PackedScene" uid="uid://bhyb2n8hqkea" path="res://scene + script/people_ui.tscn" id="10_xh0ag"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pu4h"]
 texture = ExtResource("3_jnbvq")
@@ -364,6 +365,12 @@ mouse_behavior_recursive = 2
 theme_override_styles/normal = ExtResource("7_73fyn")
 theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
+
+[node name="people ui" parent="people" unique_id=1792818350 instance=ExtResource("10_xh0ag")]
+offset_left = 8568.0
+offset_top = -451.0
+offset_right = 8568.0
+offset_bottom = -451.0
 
 [node name="boxes" type="Node2D" parent="." unique_id=1141987325]
 editor_description = "a game where you hsave to stack a combination of baxes from one side to another

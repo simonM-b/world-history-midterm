@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bhyb2n8hqkea"]
 
+[ext_resource type="Script" uid="uid://c1lg8soytnuda" path="res://scene + script/people search boxes/people_ui.gd" id="1_t0005"]
+[ext_resource type="PackedScene" uid="uid://cy4owutoioa7c" path="res://scene + script/people search boxes/map_01.tscn" id="2_x646s"]
+
 [node name="people ui" type="Control" unique_id=1792818350]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t0005")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=629101414]
 layout_mode = 0
@@ -42,6 +46,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1443216845]
+visible = false
 layout_mode = 0
 offset_left = 24.0
 offset_top = 75.0
@@ -51,3 +56,17 @@ text = "picks a random map (there will be 10 maps)
  and then you have to move your 
 mouse though the maze to gert to the person on the 
 end of it. the mouse cannot touch any walls of the maze"
+
+[node name="Label2" type="Label" parent="." unique_id=2139547128]
+layout_mode = 0
+offset_left = 712.0
+offset_right = 1071.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 32
+text = "You must make 
+it to the end 
+without 
+touching the 
+black ares"
+
+[node name="map01" parent="." unique_id=1215337068 instance=ExtResource("2_x646s")]

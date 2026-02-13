@@ -3,38 +3,11 @@
 [ext_resource type="Script" uid="uid://c1vt76d4dm3d6" path="res://scene + script/people search boxes/map_01.gd" id="1_asuwn"]
 [ext_resource type="Texture2D" uid="uid://dlhj0vslk1e0c" path="res://images/map 01.png" id="2_n2rqs"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pdptb"]
-normal = Vector2(0, 1)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kgje0"]
-normal = Vector2(1, 0)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gpsjr"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v2pfp"]
-normal = Vector2(-1, 0)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpsjr"]
 size = Vector2(81, 84)
 
 [node name="map01" type="Node2D" unique_id=1215337068]
 script = ExtResource("1_asuwn")
-
-[node name="borders2" type="Area2D" parent="." unique_id=205338997]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="borders2" unique_id=1538799979]
-shape = SubResource("WorldBoundaryShape2D_pdptb")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="borders2" unique_id=974430507]
-shape = SubResource("WorldBoundaryShape2D_kgje0")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="borders2" unique_id=441643775]
-position = Vector2(1152, 648)
-shape = SubResource("WorldBoundaryShape2D_gpsjr")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="borders2" unique_id=1865435349]
-position = Vector2(1151, 648)
-shape = SubResource("WorldBoundaryShape2D_v2pfp")
 
 [node name="Map01" type="Sprite2D" parent="." unique_id=798592819]
 position = Vector2(577.4091, 337.50003)
@@ -48,19 +21,19 @@ offset_right = 121.025635
 offset_bottom = 119.0
 mouse_filter = 2
 
+[node name="start detection button area" type="Button" parent="start" unique_id=180140784]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 81.0
+offset_bottom = 78.0
+flat = true
+
 [node name="Label" type="Label" parent="start" unique_id=1599601912]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 21.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "start"
-
-[node name="start detect" type="Area2D" parent="start" unique_id=257780593]
-position = Vector2(5, 2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="start/start detect" unique_id=1735141605]
-position = Vector2(35.5, 35)
-shape = SubResource("RectangleShape2D_gpsjr")
 
 [node name="end" type="ColorRect" parent="." unique_id=1599122643]
 offset_left = 538.0
@@ -83,11 +56,18 @@ position = Vector2(10, 9)
 position = Vector2(30.5, 32)
 shape = SubResource("RectangleShape2D_gpsjr")
 
+[node name="end button detection" type="Button" parent="end" unique_id=704520885]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 80.0
+flat = true
+
 [node name="borders" type="Control" parent="." unique_id=1523276748]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="ColorRect5" type="ColorRect" parent="borders" unique_id=681714934]
 layout_mode = 0
@@ -167,9 +147,11 @@ TO START GAME"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="allowed mouse area" unique_id=440103434]
 polygon = PackedVector2Array(79, 119, 113, 187, 141, 226, 160, 242, 182, 252, 201, 254, 302, 193, 397, 134, 449, 114, 504, 104, 623, 101, 669, 102, 761, 115, 849, 141, 896, 162, 899, 169, 907, 183, 904, 213, 863, 244, 769, 268, 696, 284, 661, 295, 630, 313, 610, 334, 590, 358, 568, 403, 562, 435, 565, 457, 568, 468, 577, 479, 595, 492, 612, 509, 627, 532, 629, 563, 620, 568, 608, 567, 611, 595, 626, 591, 648, 580, 650, 533, 640, 505, 620, 485, 588, 458, 586, 424, 610, 365, 648, 328, 699, 306, 756, 296, 850, 273, 899, 252, 923, 228, 933, 206, 927, 164, 909, 140, 825, 108, 747, 89, 673, 80, 535, 81, 472, 88, 402, 109, 344, 136, 255, 195, 200, 229, 184, 232, 169, 223, 141, 186, 100, 113, 103, 93, 66, 97)
 
-[connection signal="mouse_entered" from="start/start detect" to="." method="_on_start_detect_mouse_entered"]
-[connection signal="mouse_exited" from="start/start detect" to="." method="_on_start_detect_mouse_exited"]
+[connection signal="mouse_entered" from="start/start detection button area" to="." method="_on_start_detection_button_area_mouse_entered"]
+[connection signal="mouse_exited" from="start/start detection button area" to="." method="_on_start_detection_button_area_mouse_exited"]
 [connection signal="mouse_entered" from="end/end detect" to="." method="_on_end_detect_mouse_entered"]
 [connection signal="mouse_exited" from="end/end detect" to="." method="_on_end_detect_mouse_exited"]
+[connection signal="mouse_entered" from="end/end button detection" to="." method="_on_end_button_detection_mouse_entered"]
+[connection signal="mouse_exited" from="end/end button detection" to="." method="_on_end_button_detection_mouse_exited"]
 [connection signal="mouse_entered" from="allowed mouse area" to="." method="_on_allowed_mouse_area_mouse_entered"]
 [connection signal="mouse_exited" from="allowed mouse area" to="." method="_on_allowed_mouse_area_mouse_exited"]
