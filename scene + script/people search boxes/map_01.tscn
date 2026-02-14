@@ -9,7 +9,7 @@ size = Vector2(81, 84)
 [node name="map01" type="Node2D" unique_id=1215337068]
 script = ExtResource("1_asuwn")
 
-[node name="Map01" type="Sprite2D" parent="." unique_id=798592819]
+[node name="Map" type="Sprite2D" parent="." unique_id=798592819]
 position = Vector2(577.4091, 337.50003)
 scale = Vector2(1.4068183, 1.4068182)
 texture = ExtResource("2_n2rqs")
@@ -26,6 +26,7 @@ layout_mode = 0
 offset_left = 1.0
 offset_right = 81.0
 offset_bottom = 78.0
+mouse_filter = 1
 flat = true
 
 [node name="Label" type="Label" parent="start" unique_id=1599601912]

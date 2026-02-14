@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bhyb2n8hqkea"]
 
 [ext_resource type="Script" uid="uid://c1lg8soytnuda" path="res://scene + script/people search boxes/people_ui.gd" id="1_t0005"]
-[ext_resource type="PackedScene" uid="uid://cy4owutoioa7c" path="res://scene + script/people search boxes/map_01.tscn" id="2_x646s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0005"]
+size = Vector2(4, 4)
 
 [node name="people ui" type="Control" unique_id=1792818350]
 layout_mode = 3
@@ -58,6 +60,7 @@ mouse though the maze to gert to the person on the
 end of it. the mouse cannot touch any walls of the maze"
 
 [node name="Label2" type="Label" parent="." unique_id=2139547128]
+visible = false
 layout_mode = 0
 offset_left = 712.0
 offset_right = 1071.0
@@ -69,4 +72,24 @@ without
 touching the 
 black ares"
 
-[node name="map01" parent="." unique_id=1215337068 instance=ExtResource("2_x646s")]
+[node name="the maps" type="Node2D" parent="." unique_id=769989501]
+
+[node name="mosue follow" type="Area2D" parent="." unique_id=1885297614]
+collision_layer = 4096
+collision_mask = 4096
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mosue follow" unique_id=1467933736]
+shape = SubResource("RectangleShape2D_t0005")
+
+[node name="when win tie to restart" type="Timer" parent="." unique_id=165998141]
+wait_time = 0.4
+one_shot = true
+
+[node name="wait untill call win" type="Timer" parent="." unique_id=1660679976]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="area_entered" from="mosue follow" to="." method="_on_mosue_follow_area_entered"]
+[connection signal="area_exited" from="mosue follow" to="." method="_on_mosue_follow_area_exited"]
+[connection signal="timeout" from="when win tie to restart" to="." method="_on_when_win_tie_to_restart_timeout"]
+[connection signal="timeout" from="wait untill call win" to="." method="_on_when_get_to_end_wait_untill_call_win_timeout"]
