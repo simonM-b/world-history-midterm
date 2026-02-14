@@ -21,6 +21,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if isInsideCorrectBorder:
+		$ColorRect2.hide()
+	else:
+		$ColorRect2.show()
 	$"mosue follow".global_position = get_global_mouse_position()
 	
 func connectNewMapSignals(map):

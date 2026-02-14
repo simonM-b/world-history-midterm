@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5qrulae3rrpm"]
+[gd_scene format=3 uid="uid://c5qrulae3rrpm"]
 
 [ext_resource type="Script" uid="uid://bga6ghvjpsyq5" path="res://scene + script/title.gd" id="1_s2oh1"]
 [ext_resource type="Texture2D" uid="uid://bf08uoefc5pek" path="res://images/start/475442889_1229031218855383_763536642154055668_n-ditherlicious.png" id="2_jurty"]
@@ -13,7 +13,7 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0, 0.9647059, 0, 1)
 
-[node name="title" type="Control"]
+[node name="title" type="Control" unique_id=1307262831]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,19 +22,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s2oh1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1254740607]
 layout_mode = 0
 offset_right = 1172.0
 offset_bottom = 665.0
 color = Color(0, 0, 0, 1)
 
-[node name="Img1501AdjDitherlicious" type="Sprite2D" parent="."]
+[node name="Img1501AdjDitherlicious" type="Sprite2D" parent="." unique_id=418762947]
 texture_filter = 2
 position = Vector2(571, 324.49997)
 scale = Vector2(1.491479, 1.2449327)
 texture = ExtResource("2_jurty")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1726183]
 layout_mode = 0
 offset_left = -213.0
 offset_top = 162.0
@@ -42,7 +42,7 @@ offset_right = 1365.0
 offset_bottom = 273.0
 color = Color(0, 0, 0, 0.8235294)
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=140686192]
 layout_mode = 0
 offset_left = -213.0
 offset_top = 301.0
@@ -50,7 +50,7 @@ offset_right = 1365.0
 offset_bottom = 504.0
 color = Color(0, 0, 0, 0.8235294)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1173326774]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,25 +59,25 @@ offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1514007782]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=677199780]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jurty")
 theme_override_font_sizes/font_size = 64
 text = "CAPITALIST SHIRT SIM"
 
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=277312540]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=2003961600]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="play" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+[node name="play" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=1612250921]
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 0
@@ -89,7 +89,7 @@ theme_override_styles/pressed = ExtResource("4_j27sm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "PLAY"
 
-[node name="settings" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+[node name="settings" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=138052954]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.8089983, 0.8089983, 0.8089982, 1)
@@ -100,7 +100,7 @@ theme_override_styles/pressed = ExtResource("4_j27sm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "   SETTINGS   "
 
-[node name="credits" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+[node name="credits" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=1850017838]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.8089983, 0.8089983, 0.8089982, 1)

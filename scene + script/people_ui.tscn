@@ -81,12 +81,18 @@ collision_mask = 4096
 shape = SubResource("RectangleShape2D_t0005")
 
 [node name="when win tie to restart" type="Timer" parent="." unique_id=165998141]
-wait_time = 0.4
 one_shot = true
 
 [node name="wait untill call win" type="Timer" parent="." unique_id=1660679976]
 wait_time = 0.1
 one_shot = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=758243691]
+layout_mode = 0
+offset_right = 728.0
+offset_bottom = 474.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.39215687)
 
 [connection signal="area_entered" from="mosue follow" to="." method="_on_mosue_follow_area_entered"]
 [connection signal="area_exited" from="mosue follow" to="." method="_on_mosue_follow_area_exited"]
