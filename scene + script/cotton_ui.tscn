@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://burcj3s0a061r"]
+[gd_scene format=3 uid="uid://burcj3s0a061r"]
 
 [ext_resource type="Script" uid="uid://d4e8lx6dt4nsy" path="res://scene + script/cotton_ui.gd" id="1_xs2gf"]
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="2_gp5vi"]
@@ -14,7 +14,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xs2gf"]
 
-[node name="cotton ui" type="Control"]
+[node name="cotton ui" type="Control" unique_id=1082297014]
 layout_mode = 3
 anchor_right = 0.614
 anchor_bottom = 0.69900006
@@ -25,13 +25,13 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_xs2gf")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=978487565]
 layout_mode = 0
 offset_right = 709.0
 offset_bottom = 457.0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=959373899]
 layout_mode = 0
 offset_right = 708.0
 offset_bottom = 455.0
@@ -41,26 +41,26 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1857993440]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=71743091]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "COTTON"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1515926627]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=1963685166]
 
-[node name="cotton" type="Sprite2D" parent="Node2D"]
+[node name="cotton" type="Sprite2D" parent="Node2D" unique_id=471688957]
 position = Vector2(122.999985, 2568.9998)
 scale = Vector2(10, 10)
 texture = ExtResource("2_gp5vi")
@@ -68,7 +68,7 @@ region_enabled = true
 region_rect = Rect2(48, 40, 8, 8)
 script = ExtResource("3_gp5vi")
 
-[node name="Button" type="Button" parent="Node2D/cotton"]
+[node name="Button" type="Button" parent="Node2D/cotton" unique_id=594355999]
 offset_left = -4.4999986
 offset_top = -4.4000244
 offset_right = 3.5000014
@@ -80,15 +80,15 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_gp5vi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xs2gf")
 flat = true
 
-[node name="damageshow" type="Timer" parent="Node2D/cotton"]
+[node name="damageshow" type="Timer" parent="Node2D/cotton" unique_id=1509987444]
 wait_time = 0.05
 autostart = true
 
-[node name="cottonresettimer" type="Timer" parent="."]
+[node name="cottonresettimer" type="Timer" parent="." unique_id=681402839]
 wait_time = 0.1
 one_shot = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=164618236]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 359.0
@@ -98,20 +98,20 @@ theme_override_font_sizes/font_size = 32
 text = "Each     is a cotton. click 2-3 times
 to harvest. 1 cotton gives you $5"
 
-[node name="Sprite2D" type="Sprite2D" parent="Label"]
+[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=889121196]
 position = Vector2(130, 21)
 scale = Vector2(6, 6)
 texture = ExtResource("2_gp5vi")
 region_enabled = true
 region_rect = Rect2(48, 40, 8, 8)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1343923596]
 layout_mode = 0
 offset_top = 46.0
 offset_right = 710.0
 offset_bottom = 457.0
 
-[node name="Label" type="Label" parent="ColorRect2"]
+[node name="Label" type="Label" parent="ColorRect2" unique_id=1816037082]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 21.0
@@ -119,7 +119,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "to play mini game buy it 
 from the shop. (the shop is to the
-far left of the world.) Cost = $50"
+far left of the world.)"
 
 [connection signal="killed" from="Node2D/cotton" to="." method="_on_cotton_killed"]
 [connection signal="pressed" from="Node2D/cotton/Button" to="Node2D/cotton" method="_on_button_pressed"]

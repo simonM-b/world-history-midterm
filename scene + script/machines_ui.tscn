@@ -184,7 +184,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "to play mini game buy it 
 from the shop. (the shop is to the
-far left of the world.) Cost = $1000"
+far left of the world.)"
 
 [node name="Label" type="Label" parent="." unique_id=1035555160]
 layout_mode = 0

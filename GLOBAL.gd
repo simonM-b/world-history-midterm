@@ -24,7 +24,7 @@ var minigameMoney = { #The amount of money that you get if you win each minigame
 	button = 1,
 	cotton = 5,
 	machines = 50,
-	people = 500,
+	people = 600,
 	boxes = 5000
 }
 
@@ -34,7 +34,7 @@ var shopCostItem = {
 	machines = 1000,
 	people = 9000,
 	boxes = 20000,
-	end = 291100
+	end = 500000
 }
 
 var listOfMapPeopleMaps = []

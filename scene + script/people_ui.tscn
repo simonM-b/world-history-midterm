@@ -60,7 +60,6 @@ mouse though the maze to gert to the person on the
 end of it. the mouse cannot touch any walls of the maze"
 
 [node name="Label2" type="Label" parent="." unique_id=2139547128]
-visible = false
 layout_mode = 0
 offset_left = 712.0
 offset_right = 1071.0

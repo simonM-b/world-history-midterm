@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8s132mgwy67m"]
+[gd_scene format=3 uid="uid://c8s132mgwy67m"]
 
 [ext_resource type="Script" uid="uid://npgfb88hxjvk" path="res://scene + script/shop_ui.gd" id="1_c23uf"]
 
@@ -18,7 +18,7 @@ border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0, 0.9647059, 0, 1)
 
-[node name="shop" type="Control"]
+[node name="shop" type="Control" unique_id=21790807]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,39 +27,39 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c23uf")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1178374389]
 layout_mode = 0
 offset_right = 554.0
 offset_bottom = 457.0
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1928280486]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1504733532]
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=970467148]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "SHOP"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=265616583]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 34
 
-[node name="walking speed" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="walking speed" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=2071319524]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="WspButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/walking speed"]
+[node name="WspButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/walking speed" unique_id=183647902]
 custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 focus_mode = 0
@@ -82,21 +82,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
 text = "buy $100"
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/walking speed"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/walking speed" unique_id=1034279778]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "2x sprinting speed 
 (to sprint hold shift)"
 
-[node name="HSeparator2" type="HSeparator" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=345574842]
 layout_mode = 2
 
-[node name="cotton plant" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="cotton plant" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=861205467]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="CButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/cotton plant"]
+[node name="CButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/cotton plant" unique_id=244148618]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 focus_mode = 0
@@ -119,17 +119,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
 text = "buy $25"
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/cotton plant"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/cotton plant" unique_id=77580546]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Cotton plant"
 
-[node name="Machines" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Machines" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=996641170]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="mButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/Machines"]
+[node name="mButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/Machines" unique_id=617292114]
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 focus_mode = 0
@@ -152,18 +152,18 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
 text = "buy $1000"
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/Machines"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/Machines" unique_id=1339365638]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Machines"
 
-[node name="people" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="people" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=937269511]
 modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/people"]
+[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/people" unique_id=432113091]
 custom_minimum_size = Vector2(190, 0)
 layout_mode = 2
 focus_mode = 0
@@ -186,17 +186,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
 text = "buy $9000"
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/people"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/people" unique_id=281735672]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "People plant"
 
-[node name="boxes" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="boxes" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=703573256]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="bBButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/boxes"]
+[node name="bBButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/boxes" unique_id=2064842402]
 custom_minimum_size = Vector2(210, 0)
 layout_mode = 2
 focus_mode = 0
@@ -217,20 +217,20 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
-text = "buy $45000"
+text = "buy $20000"
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/boxes"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/boxes" unique_id=1334552015]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Shipping boxes"
 
-[node name="make a shirt" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="make a shirt" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1053639950]
 modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/make a shirt"]
+[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/make a shirt" unique_id=1605282427]
 custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
 focus_mode = 0
@@ -253,7 +253,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sjqf3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c23uf")
 text = "buy $500000"
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/make a shirt"]
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/make a shirt" unique_id=410059652]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25

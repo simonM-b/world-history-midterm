@@ -58,7 +58,7 @@ func mouseStartC(inside):
 func mouseEndC(inside):
 	isInEnd = inside
 	if isInsideCorrectBorder:
-		$"when get to end wait untill call win".start()
+		$"wait untill call win".start()
 	print("END", inside)
 	
 
