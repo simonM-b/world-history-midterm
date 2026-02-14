@@ -2,7 +2,8 @@ extends Control
 
 var randomMapNumb
 var maps = [
-preload("res://scene + script/people search boxes/v2 maps/map_01_v_2.tscn")
+preload("res://scene + script/people search boxes/v2 maps/map_01_v_2.tscn"),
+preload("res://scene + script/people search boxes/v2 maps/map_02_v2.tscn")
 ]
 var currentMap
 var winScene = preload("res://scene + script/people search boxes/people_win_screen.tscn")
@@ -21,10 +22,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if isInsideCorrectBorder:
-		$ColorRect2.hide()
+	if isInsideCorrectBorder or isInStart:
+		$"when not in correct".hide()
 	else:
-		$ColorRect2.show()
+		$"when not in correct".show()
 	$"mosue follow".global_position = get_global_mouse_position()
 	
 func connectNewMapSignals(map):

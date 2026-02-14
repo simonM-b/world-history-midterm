@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://df2ey5dbo35et"]
+
+[ext_resource type="Texture2D" uid="uid://dprvdi40udswm" path="res://images/map-02.png" id="1_evjxl"]
+[ext_resource type="Script" uid="uid://deeay6fdmmjmn" path="res://scene + script/people search boxes/v2 maps/maps_v2.gd" id="1_wwjcs"]
+
+[node name="Area2D" type="Area2D" unique_id=1643744514 groups=["correct area"]]
+collision_layer = 4096
+collision_mask = 4096
+script = ExtResource("1_wwjcs")
+
+[node name="map01 VER2" type="Sprite2D" parent="." unique_id=73973325]
+scale = Vector2(1.4681818, 1.4681818)
+texture = ExtResource("1_evjxl")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=302970373]
+offset_right = 118.0
+offset_bottom = 62.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1465863631]
+offset_left = 486.0
+offset_top = 557.0
+offset_right = 604.0
+offset_bottom = 619.0
+
+[node name="start" type="Button" parent="." unique_id=2092207503]
+offset_right = 117.0
+offset_bottom = 62.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+button_mask = 0
+text = "start"
+flat = true
+
+[node name="end" type="Button" parent="." unique_id=1077701510]
+offset_left = 487.0
+offset_top = 557.0
+offset_right = 604.0
+offset_bottom = 620.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+button_mask = 0
+text = "end"
+flat = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1676428574]
+scale = Vector2(1.4681818, 1.4681818)
+polygon = PackedVector2Array(25, 9.6, 25, 12, 15, 20, 15, 32.8, 27.1, 46, 27.7, 46, 40, 73.3, 40, 75.8, 60, 95.8, 60, 97, 73, 105.9, 73, 107.5, 105, 117.4, 105, 119, 193.2, 119, 258.4, 107, 264.2, 107, 370, 81.6, 370, 80.7, 401, 76.8, 401, 75.9, 469, 72.9, 469, 72, 512.7, 72, 605.8, 87, 610.6, 87, 636.6, 99, 638.1, 99, 652.2, 112, 652.8, 112, 660.8, 127, 666.4, 151, 667.2, 151, 673.2, 217, 674, 217, 674, 270.2, 656.2, 287.9, 653.7, 273, 653.1, 273, 654.9, 232, 656, 232, 656, 198.6, 653, 191.6, 653, 186.5, 640, 160.5, 640, 158, 629, 149.9, 629, 148.4, 615, 145.3, 615, 144.2, 601.1, 143, 508.2, 143, 450, 137.1, 450, 135.9, 398.9, 139, 390.8, 139, 158.9, 193, 154.5, 193, 137.5, 202, 135.2, 202, 128.2, 209, 125.9, 209, 114, 226.4, 114, 239.7, 123, 251.6, 123, 253.9, 137, 266.9, 137, 268.9, 176, 304.9, 176, 306.1, 217, 333.1, 217, 334.3, 295.6, 368, 298.5, 368, 362, 399.2, 362, 401, 379, 401, 385, 393, 387.2, 393, 386, 379.8, 386, 376.8, 361.5, 363, 328.97833, 350.774, 254.05573, 312.6316, 184.58205, 265.63467, 148.48297, 230.21672, 214.55109, 212.50774, 286.74924, 196.161, 354.8607, 187.98761, 429.10217, 192.75542, 459.75232, 199.56656, 401.17648, 204.33437, 337.1517, 222.04335, 329.65945, 351.4551, 357.58514, 365.7585, 366.8, 318, 368.1, 318, 367.80185, 279.93808, 365.9, 262, 365.3, 262, 367, 250.1, 367, 248.5, 384, 244.6, 384, 243.7, 435.2, 238, 443.3, 238, 486.3, 224, 488.8, 224, 515.7, 200, 518, 200, 518, 185.2, 511, 177.2, 511, 175.4, 461.11456, 167.55418, 608, 176, 611.7, 176, 620.7, 195, 622.2, 203, 623, 203, 623, 299.5, 631, 313.4, 631, 316, 642, 324, 642, 325.6, 647.8, 327, 657.5, 327, 669.5, 320, 671.9, 320, 695.9, 294, 697.2, 294, 705.2, 278, 707.1, 278, 705, 208.9, 705, 187.8, 698, 144.7, 698, 138.7, 692, 118, 692, 114.4, 683, 100.3, 683, 98.2, 664, 79.2, 664, 77.9, 651, 69.9, 651, 68.7, 629, 59.5, 629, 58.3, 523, 41.2, 523, 39.9, 442.9, 42, 410.8, 42, 356.7, 51, 351.8, 51, 247, 76.4, 247, 77.2, 165.7, 89, 122.1, 89, 97.3, 82, 94.6, 82, 82.6, 74, 80.9, 74, 70.9, 63, 70.3, 63, 55, 31.5, 55, 28.2, 41, 14.2, 41, 12.3)
+
+[connection signal="mouse_entered" from="start" to="." method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="start" to="." method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="end" to="." method="_on_end_mouse_entered"]
+[connection signal="mouse_exited" from="end" to="." method="_on_end_mouse_exited"]

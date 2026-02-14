@@ -87,12 +87,22 @@ one_shot = true
 wait_time = 0.1
 one_shot = true
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=758243691]
+[node name="when not in correct" type="ColorRect" parent="." unique_id=758243691]
 layout_mode = 0
 offset_right = 728.0
 offset_bottom = 474.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0.39215687)
+
+[node name="Label" type="Label" parent="when not in correct" unique_id=1886077787]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 55.0
+offset_right = 698.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PUT MOUSE TO START
+TO PLAT GAME!"
 
 [connection signal="area_entered" from="mosue follow" to="." method="_on_mosue_follow_area_entered"]
 [connection signal="area_exited" from="mosue follow" to="." method="_on_mosue_follow_area_exited"]
