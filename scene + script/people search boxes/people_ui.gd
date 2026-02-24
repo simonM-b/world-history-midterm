@@ -3,7 +3,8 @@ extends Control
 var randomMapNumb
 var maps = [
 preload("res://scene + script/people search boxes/v2 maps/map_01_v_2.tscn"),
-preload("res://scene + script/people search boxes/v2 maps/map_02_v2.tscn")
+preload("res://scene + script/people search boxes/v2 maps/map_02_v2.tscn"),
+preload("res://scene + script/people search boxes/v2 maps/map_03_v2.tscn")
 ]
 var currentMap
 var winScene = preload("res://scene + script/people search boxes/people_win_screen.tscn")
@@ -11,6 +12,8 @@ var winScene = preload("res://scene + script/people search boxes/people_win_scre
 var isInsideCorrectBorder = false
 var isInStart = false
 var isInEnd = false
+
+var enteredborder = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,6 +25,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if GLOBAL.people:
+		$"poor not bought".hide()
+	else:
+		$"poor not bought".show()
+	
 	if isInsideCorrectBorder or isInStart:
 		$"when not in correct".hide()
 	else:
@@ -59,6 +67,8 @@ func win():
 func mouseStartC(inside):
 	isInStart = inside
 	print("START", inside)
+	if enteredborder:
+		isInsideCorrectBorder = true
 	
 func mouseEndC(inside):
 	isInEnd = inside
@@ -69,6 +79,7 @@ func mouseEndC(inside):
 
 func _on_mosue_follow_area_entered(area: Area2D) -> void:
 	if area.is_in_group("correct area"):
+		enteredborder = true
 		if isInStart:
 			isInsideCorrectBorder = true
 			print("IN CORRECT AREA AND START")
@@ -76,6 +87,7 @@ func _on_mosue_follow_area_entered(area: Area2D) -> void:
 
 func _on_mosue_follow_area_exited(area: Area2D) -> void:
 	if area.is_in_group("correct area"):
+		enteredborder = false
 		isInsideCorrectBorder = false
 		print("EXITED CORRECT AREA")
 

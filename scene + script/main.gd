@@ -4,6 +4,7 @@ var shopButton = 0
 var cottonButton = 0
 var machButton = 0
 var boButton = 0
+var plButton = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,3 +47,11 @@ func _on_bo_button_3_pressed() -> void:
 		$"boxes/boxes ui".show()
 	else:
 		$"boxes/boxes ui".hide()
+
+
+func _on_ppl_button_3_pressed() -> void:
+	plButton += 1
+	if plButton % 2 == 1:
+		$"people/people ui".show()
+	else:
+		$"people/people ui".hide()

@@ -367,6 +367,7 @@ theme_override_styles/pressed = ExtResource("7_73fyn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fyn")
 
 [node name="people ui" parent="people" unique_id=1792818350 instance=ExtResource("10_xh0ag")]
+visible = false
 offset_left = 8568.0
 offset_top = -451.0
 offset_right = 8568.0
@@ -414,4 +415,5 @@ A,D(left, right) + SPACE(jump) is to move around"
 [connection signal="pressed" from="shop/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="cotton/CButton" to="." method="_on_c_button_pressed"]
 [connection signal="pressed" from="machines/MButton2" to="." method="_on_m_button_2_pressed"]
+[connection signal="pressed" from="people/PPLButton3" to="." method="_on_ppl_button_3_pressed"]
 [connection signal="pressed" from="boxes/BoButton3" to="." method="_on_bo_button_3_pressed"]

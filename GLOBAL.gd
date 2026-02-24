@@ -19,6 +19,7 @@ var cotton = false
 var machon = false
 var machBought = false
 var boxes = false
+var people = false
 
 var minigameMoney = { #The amount of money that you get if you win each minigame
 	button = 1,

@@ -159,11 +159,10 @@ theme_override_font_sizes/font_size = 25
 text = "Machines"
 
 [node name="people" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=937269511]
-modulate = Color(0.69135684, 0.6913568, 0.69135684, 0.39215687)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/people" unique_id=432113091]
+[node name="PPButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/people" unique_id=432113091]
 custom_minimum_size = Vector2(190, 0)
 layout_mode = 2
 focus_mode = 0
@@ -262,4 +261,5 @@ text = "Finish the shirt"
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/walking speed/WspButton" to="." method="_on_wsp_button_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/cotton plant/CButton" to="." method="_on_c_button_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Machines/mButton" to="." method="_on_m_button_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/people/PPButton" to="." method="_on_pp_button_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/boxes/bBButton" to="." method="_on_b_b_button_pressed"]

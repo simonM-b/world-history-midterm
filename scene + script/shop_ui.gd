@@ -38,3 +38,11 @@ func _on_wsp_button_pressed() -> void:
 		GLOBAL.money -= GLOBAL.shopCostItem.speed
 		GLOBAL.allowMoreSpeed = true
 		$"ColorRect/MarginContainer/VBoxContainer/walking speed".hide()
+
+
+
+func _on_pp_button_pressed() -> void:
+	if GLOBAL.money >= GLOBAL.shopCostItem.people:
+		GLOBAL.money -= GLOBAL.shopCostItem.people
+		GLOBAL.people = true
+		$ColorRect/MarginContainer/VBoxContainer/people.hide()
