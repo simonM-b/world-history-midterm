@@ -96,7 +96,7 @@ offset_right = 698.0
 offset_bottom = 400.0
 theme_override_font_sizes/font_size = 32
 text = "Each     is a cotton. click 2-3 times
-to harvest. 1 cotton gives you $5"
+to harvest. 1 cotton gives you $10"
 
 [node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=889121196]
 position = Vector2(130, 21)

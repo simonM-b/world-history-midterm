@@ -97,4 +97,5 @@ func _on_when_get_to_end_wait_untill_call_win_timeout() -> void:
 
 
 func _on_when_win_tie_to_restart_timeout() -> void:
+	GLOBAL.money += GLOBAL.minigameMoney.people
 	restart()

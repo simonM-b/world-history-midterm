@@ -23,10 +23,10 @@ var people = false
 
 var minigameMoney = { #The amount of money that you get if you win each minigame
 	button = 1,
-	cotton = 5,
-	machines = 50,
-	people = 600,
-	boxes = 5000
+	cotton = 10,
+	machines = 100,
+	people = 1000,
+	boxes = 10000
 }
 
 var shopCostItem = {
