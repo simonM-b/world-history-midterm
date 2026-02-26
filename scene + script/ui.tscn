@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgim27pxretky"]
+[gd_scene format=3 uid="uid://cgim27pxretky"]
 
 [ext_resource type="Script" uid="uid://de56ltea2vtm1" path="res://scene + script/ui.gd" id="1_fctkd"]
 
-[node name="ui" type="Control"]
+[node name="ui" type="Control" unique_id=567676255]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,36 +12,36 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_fctkd")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=387892688]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="money label" type="Label" parent="HBoxContainer"]
+[node name="money label" type="Label" parent="HBoxContainer" unique_id=2141414802]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "$$$$:00000000"
 
-[node name="slider label" type="Label" parent="HBoxContainer"]
+[node name="slider label" type="Label" parent="HBoxContainer" unique_id=998720818]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "map:"
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1857604175]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer" unique_id=2026169119]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="HSlider" type="HSlider" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HSlider" type="HSlider" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=544395997]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 mouse_filter = 2
@@ -51,47 +51,47 @@ tick_count = 7
 ticks_on_borders = true
 ticks_position = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=1681226957]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="slider label2" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label2" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=41261506]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "shop"
 
-[node name="slider label3" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label3" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=340363032]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "    button"
 
-[node name="slider label4" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label4" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2063069284]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "     cotton"
 
-[node name="slider label5" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label5" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=962304296]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "     Machines"
 
-[node name="slider label8" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label8" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1139195216]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "   people"
 
-[node name="slider label6" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label6" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=110944127]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "     boxes"
 
-[node name="slider label7" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="slider label7" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1474868666]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "       End"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1007141853]
 layout_mode = 0
 offset_left = 533.0
 offset_top = 120.0
@@ -99,7 +99,7 @@ offset_right = 1133.0
 offset_bottom = 141.0
 text = "This is the map and it will show you where you currently are"
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=2143081011]
 layout_mode = 0
 offset_left = 726.0
 offset_top = 98.999985
@@ -108,23 +108,28 @@ offset_bottom = 119.999985
 rotation = -0.54481465
 text = "--->"
 
-[node name="money" type="Button" parent="."]
+[node name="ggg" type="Control" parent="." unique_id=1753451847]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="money" type="Button" parent="ggg" unique_id=457544344]
 layout_mode = 0
 offset_top = 61.0
-offset_right = 8.0
-offset_bottom = 69.0
+offset_right = 52.0
+offset_bottom = 90.0
 focus_mode = 0
 text = "+100"
 
-[node name="moneyii" type="Button" parent="."]
+[node name="moneyii" type="Button" parent="ggg" unique_id=778017440]
 layout_mode = 0
 offset_top = 124.0
-offset_right = 52.0
+offset_right = 64.0
 offset_bottom = 153.0
 focus_mode = 0
 text = "+1000"
 
-[node name="moneym" type="Button" parent="."]
+[node name="moneym" type="Button" parent="ggg" unique_id=1277869418]
 layout_mode = 0
 offset_top = 92.0
 offset_right = 52.0
@@ -132,6 +137,6 @@ offset_bottom = 121.0
 focus_mode = 0
 text = "-100"
 
-[connection signal="pressed" from="money" to="." method="_on_money_pressed"]
-[connection signal="pressed" from="moneyii" to="." method="_on_moneyii_pressed"]
-[connection signal="pressed" from="moneym" to="." method="_on_moneym_pressed"]
+[connection signal="pressed" from="ggg/money" to="." method="_on_money_pressed"]
+[connection signal="pressed" from="ggg/moneyii" to="." method="_on_moneyii_pressed"]
+[connection signal="pressed" from="ggg/moneym" to="." method="_on_moneym_pressed"]

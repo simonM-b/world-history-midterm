@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://k63yvfer1t4i"]
+
+[node name="End ui" type="Control" unique_id=197338487]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1962039845]
+layout_mode = 0
+offset_right = 709.0
+offset_bottom = 457.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=258260659]
+layout_mode = 0
+offset_right = 708.0
+offset_bottom = 455.0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=277106078]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=832454925]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "THE END ;3"
+horizontal_alignment = 1
+
+[node name="the stuff" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=639395464]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/the stuff" unique_id=397646796]
+layout_mode = 0
+offset_right = 694.0
+offset_bottom = 399.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer" unique_id=95380830]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=655218752]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "To do list (to finish the game): "
+
+[node name="cotton" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=1880826974]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Collect 50 cotton (i)"
+
+[node name="cotton2" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=1236029599]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Catch 25 cottons (i)"
+
+[node name="ppl" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=947641260]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "find 10 people (i)"
+
+[node name="boxes" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=1047584788]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "stack 15 boxes stacks (i)"
+
+[node name="Label2" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/the stuff" unique_id=542784910]
+layout_mode = 0
+offset_left = 709.0
+offset_top = -38.0
+offset_right = 1393.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 32
+text = "Click the (i) next to 
+each item for more
+information."
