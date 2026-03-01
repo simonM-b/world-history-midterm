@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf08uoefc5pek" path="res://images/start/475442889_1229031218855383_763536642154055668_n-ditherlicious.png" id="2_jurty"]
 [ext_resource type="FontFile" uid="uid://dj52ykovlccx8" path="res://fonts/Retro Gaming.ttf" id="3_jurty"]
 [ext_resource type="StyleBox" uid="uid://ddvgphykvvbgb" path="res://scene + script/stylebox.tres" id="4_j27sm"]
+[ext_resource type="PackedScene" uid="uid://cwnqe04c34svv" path="res://scene + script/install_sounds.tscn" id="5_p4j88"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j27sm"]
 bg_color = Color(1, 1, 1, 0)
@@ -89,6 +90,10 @@ theme_override_styles/pressed = ExtResource("4_j27sm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "PLAY"
 
+[node name="pTimer" type="Timer" parent="CenterContainer/VBoxContainer/VBoxContainer/play" unique_id=141563719]
+wait_time = 0.1
+one_shot = true
+
 [node name="settings" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=138052954]
 layout_mode = 2
 size_flags_vertical = 0
@@ -99,6 +104,10 @@ theme_override_styles/normal = ExtResource("4_j27sm")
 theme_override_styles/pressed = ExtResource("4_j27sm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "   SETTINGS   "
+
+[node name="sTimer" type="Timer" parent="CenterContainer/VBoxContainer/VBoxContainer/settings" unique_id=755325782]
+wait_time = 0.1
+one_shot = true
 
 [node name="credits" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=1850017838]
 layout_mode = 2
@@ -111,6 +120,16 @@ theme_override_styles/pressed = ExtResource("4_j27sm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j27sm")
 text = "CREDITS"
 
+[node name="cTimer" type="Timer" parent="CenterContainer/VBoxContainer/VBoxContainer/credits" unique_id=668007502]
+wait_time = 0.1
+one_shot = true
+
+[node name="install sounds" parent="." unique_id=1367841936 instance=ExtResource("5_p4j88")]
+root_path = NodePath("..")
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="timeout" from="CenterContainer/VBoxContainer/VBoxContainer/play/pTimer" to="." method="_on_p_timer_timeout"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="timeout" from="CenterContainer/VBoxContainer/VBoxContainer/settings/sTimer" to="." method="_on_s_timer_timeout"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
+[connection signal="timeout" from="CenterContainer/VBoxContainer/VBoxContainer/credits/cTimer" to="." method="_on_c_timer_timeout"]

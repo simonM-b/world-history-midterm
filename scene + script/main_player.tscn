@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dm08rkou3jlh"]
+[gd_scene format=3 uid="uid://dm08rkou3jlh"]
 
 [ext_resource type="Script" uid="uid://c2gocv056d3ej" path="res://scene + script/main_player.gd" id="1_w0r2c"]
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="2_s6ogv"]
@@ -33,11 +33,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="main player" type="CharacterBody2D"]
+[node name="main player" type="CharacterBody2D" unique_id=908537534]
 script = ExtResource("1_w0r2c")
 metadata/_edit_vertical_guides_ = [50.0]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1294230168]
 visible = false
 offset_left = -50.0
 offset_top = -69.0
@@ -45,27 +45,27 @@ offset_right = 50.0
 offset_bottom = 68.0
 color = Color(1, 0, 1, 0.16078432)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=519269823]
 shape = SubResource("CapsuleShape2D_acwip")
 
-[node name="jumpray" type="RayCast2D" parent="."]
+[node name="jumpray" type="RayCast2D" parent="." unique_id=1932237784]
 target_position = Vector2(0, 400)
 
-[node name="Area2D" type="Area2D" parent="." groups=["Mplayer"]]
+[node name="Area2D" type="Area2D" parent="." unique_id=1660998306 groups=["Mplayer"]]
 collision_layer = 2049
 collision_mask = 2049
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1044606608]
 shape = SubResource("CapsuleShape2D_w0r2c")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=601393122]
 texture_filter = 1
 scale = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_5h1l8")
 animation = &"new_animation"
 frame = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1928490022]
 offset_left = -118.0
 offset_top = -137.0
 offset_right = 113.0
@@ -74,5 +74,7 @@ theme_override_font_sizes/font_size = 24
 text = "hold SHIFT for 
 2x speed"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1074508044]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
