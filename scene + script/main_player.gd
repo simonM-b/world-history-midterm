@@ -45,6 +45,7 @@ func handleJump():
 		canJump = true
 	
 	if is_on_floor() and canJump:
+		$jump.play()
 		canJump = false
 		velocity.y = jumpSpeed
 	

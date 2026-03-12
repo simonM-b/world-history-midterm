@@ -15,6 +15,8 @@ var money = 0
 
 var mapProgress = 0
 
+var shouldSound = true
+
 var cotton = false
 var machon = false
 var machBought = false

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2gocv056d3ej" path="res://scene + script/main_player.gd" id="1_w0r2c"]
 [ext_resource type="Texture2D" uid="uid://ue1m36gfaa2i" path="res://images/1BitPlatformerTileset.png" id="2_s6ogv"]
+[ext_resource type="AudioStream" uid="uid://dyhh5mi2ps5r0" path="res://audio/jump_01.wav" id="3_4y46b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acwip"]
 radius = 49.0
@@ -75,6 +76,7 @@ text = "hold SHIFT for
 2x speed"
 horizontal_alignment = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1074508044]
+[node name="jump" type="AudioStreamPlayer" parent="." unique_id=1074508044]
+stream = ExtResource("3_4y46b")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
