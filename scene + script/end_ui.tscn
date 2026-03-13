@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://k63yvfer1t4i"]
 
+[ext_resource type="Script" uid="uid://br060eqiq7x26" path="res://scene + script/end_ui.gd" id="1_cv75r"]
+
 [node name="End ui" type="Control" unique_id=197338487]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cv75r")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1962039845]
 layout_mode = 0
@@ -39,7 +42,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0.72156864, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/the stuff" unique_id=397646796]
 layout_mode = 0
@@ -59,22 +62,22 @@ text = "To do list (to finish the game): "
 [node name="cotton" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=1880826974]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Collect 50 cotton (i)"
+text = "Collect 50 cotton (i) left:"
 
 [node name="cotton2" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=1236029599]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Catch 25 cottons (i)"
+text = "Catch 25 cottons (i) left:"
 
 [node name="ppl" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=947641260]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "find 10 people (i)"
+text = "Find 10 people (i) left:"
 
 [node name="boxes" type="CheckBox" parent="ColorRect/MarginContainer/VBoxContainer/the stuff/MarginContainer/VBoxContainer" unique_id=1047584788]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "stack 15 boxes stacks (i)"
+text = "Stack 15 boxes stacks (i) left: "
 
 [node name="Label2" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/the stuff" unique_id=542784910]
 layout_mode = 0
