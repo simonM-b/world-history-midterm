@@ -12,4 +12,8 @@ func _playMusic(music: AudioStream, volume = 0.0):
 
 func playMainMusic():
 	_playMusic(mainMusic)
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("debug_mute_sound"):
+		volume_db = -60
 	
